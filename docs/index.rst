@@ -7,7 +7,7 @@ Welcome to AFS documentation!
 ====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Portal
 
    portal/workspace
@@ -17,13 +17,13 @@ Welcome to AFS documentation!
    portal/vendor
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: SDK
 
    sdk/README
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Inference Engine
 
    inference_engine/index

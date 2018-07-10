@@ -1,8 +1,5 @@
 ## Tasks
 
-### Get started
-
-The default screen of tasks will look like:
 ![](../_static/images/tasks/default.png)
 
 ### Create new task
@@ -10,3 +7,11 @@ The default screen of tasks will look like:
 #### Task types
 
 #### Trigger types
+
+### Task detail
+
+#### Pause task
+
+#### Resume task
+
+### Delete task
