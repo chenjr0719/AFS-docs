@@ -1,5 +1,7 @@
 # AFS-docs
 
+[![Documentation Status](https://readthedocs.org/projects/afs-docs/badge/?version=latest)](https://afs-docs.readthedocs.io/en/latest/?badge=latest)
+
 Documentation for EnSaaS Analytic Framework Service and related projects
 
 This documentation will hosted on [Readthedocs](https://afs-docs.readthedocs.io/en/latest/).

@@ -20,8 +20,7 @@ Welcome to AFS documentation!
    :maxdepth: 3
    :caption: SDK
 
-   sdk/README
-   sdk/InstallDependencies
+   sdk/docs/index
 
 .. toctree::
    :maxdepth: 3

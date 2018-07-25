@@ -1,0 +1,3 @@
+[submodule "docs/sdk"]
+	path = docs/sdk
+	url = https://github.com/benchuang11046/afs.git

@@ -39,6 +39,7 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
     'sphinx.ext.githubpages',
 ]
 
@@ -170,3 +171,14 @@ source_suffix = ['.rst', '.md']
 
 def setup(app):
     app.add_stylesheet('css/custom.css')  # may also be an URL
+
+
+# Add sdk path to allow sphinx-apidoc to autogenerate documentation from docstrings
+import os
+import sys
+
+doc_root_path = os.path.dirname(__file__)
+sdk_path = os.path.join(doc_root_path, 'sdk')
+sys.path.insert(0, sdk_path)
+
+import afs
