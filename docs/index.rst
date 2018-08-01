@@ -26,7 +26,7 @@ Welcome to AFS documentation!
    :maxdepth: 3
    :caption: Inference Engine
 
-   inference_engine/index
+   inference_engine/Install_packages
 
 
 Indices and tables
