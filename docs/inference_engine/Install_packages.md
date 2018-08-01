@@ -7,12 +7,12 @@ The Inference engine is a Python runtime program that runs on Docker on a foggy 
 
 Example below is the installation of the xgboost Package:
 
-1. Enter the container
+1. Enter the container.
    ```
    docker exec -it $CONTAINER_ID bash
    ```
 
-2. Execute pip install
+2. Execute pip install.
    ```
    pip install xgboost
    ```
@@ -23,17 +23,15 @@ Example below is the installation of the xgboost Package:
 
 Example below is the installation of the xgboost Package:
 
-1. Put the xgboost package whl file in the c:\inference_engine directory
+1. Put the xgboost package whl file in the c:\inference_engine directory.
 ![image](../_static/images/inference_engine/whl_path.png)
-
 
 2. Go to the /inference_engine folder in the container that Docker runs.
    ```
    cd /inference_engine/
    ```
-
  
-3. Use pip install to install xgboost's whl file
+3. Use pip install to install xgboost's whl file.
    ```
    pip install xgboost-0.72.1-py2.py3-none-manylinux1_x86_64.whl
    ```
