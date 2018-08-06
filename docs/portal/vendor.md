@@ -9,7 +9,7 @@ The **vendor** provides modules support for private cloud version of AFS. This c
 3. Delete module in vendor
 
 
-![vendor](../_static/images/vendor/default.png)
+![vendor](../_static/images/portal/vendor/default.png)
 
 
 ### Download required module from [PyPI](https://pypi.org/)
@@ -21,16 +21,16 @@ Python modules will follow [PEP 427](https://www.python.org/dev/peps/pep-0427/#f
 Here is an example for download a module **scikit-learn**:
 
 1. Search the module on [PyPI](https://pypi.org/).
-    ![search_module](../_static/images/vendor/scikit_learn_search.png)
+    ![search_module](../_static/images/portal/vendor/scikit_learn_search.png)
 
 2. Find the correct project page.
-    ![module_page](../_static/images/vendor/scikit_learn.png)
+    ![module_page](../_static/images/portal/vendor/scikit_learn.png)
 
 3. Switch to **Download files** page.
-    ![download_files](../_static/images/vendor/scikit_learn_download_files_1.png)
+    ![download_files](../_static/images/portal/vendor/scikit_learn_download_files_1.png)
 
 4. Choose compatible version and download.
-    ![download_files](../_static/images/vendor/scikit_learn_download_files_2.png)
+    ![download_files](../_static/images/portal/vendor/scikit_learn_download_files_2.png)
 
 The name of wheel file looks like:
 ```
@@ -41,13 +41,13 @@ According to [PEP 427](https://www.python.org/dev/peps/pep-0427/#file-format), *
 Another example is **requests**:
 
 1. Search the module on [PyPI](https://pypi.org/).
-    ![search_module](../_static/images/vendor/requests_search.png)
+    ![search_module](../_static/images/portal/vendor/requests_search.png)
 
 2. Find the correct project page.
-    ![module_page](../_static/images/vendor/requests.png)
+    ![module_page](../_static/images/portal/vendor/requests.png)
 
 3. Switch to **Download files** page and download.
-    ![download_files](../_static/images/vendor/requests_download_files.png)
+    ![download_files](../_static/images/portal/vendor/requests_download_files.png)
 
 In this example, the name of wheel is:
 ```
@@ -61,13 +61,13 @@ If the file name looks like this, it means this wheel can be used for both **Pyt
 After download module file, you can upload it to AFS vendor and let all analytic app to use this module in Online Code IDE.
 
 1. Press **upload** button
-    ![upload_module](../_static/images/vendor/upload_module.png)
+    ![upload_module](../_static/images/portal/vendor/upload_module.png)
 
 2. Select file which downloaded at first step.
-    ![upload_module](../_static/images/vendor/select_file.png)
+    ![upload_module](../_static/images/portal/vendor/select_file.png)
 
 3. Check the module.
-    ![check_module](../_static/images/vendor/check_module.png)
+    ![check_module](../_static/images/portal/vendor/check_module.png)
 
 
 ### Delete module in vendor
@@ -75,8 +75,8 @@ After download module file, you can upload it to AFS vendor and let all analytic
 You can also delete modules in vendor with following steps:
 
 1. Click trash icon right behind the module name.
-    ![module_delete_button](../_static/images/vendor/delete_module.png)
+    ![module_delete_button](../_static/images/portal/vendor/delete_module.png)
 
 2. Portal will ask to confirm delete, click **delete** button.
-    ![delete_module](../_static/images/vendor/delete_confirm.png)
+    ![delete_module](../_static/images/portal/vendor/delete_confirm.png)
 

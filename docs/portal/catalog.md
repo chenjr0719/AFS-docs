@@ -1,6 +1,6 @@
 ## Catalog
 
-![](../_static/images/catalog/default.png)
+![](../_static/images/portal/catalog/default.png)
 
 ### Analytics
 

@@ -1,6 +1,6 @@
 ## Tasks
 
-![](../_static/images/tasks/default.png)
+![](../_static/images/portal/tasks/default.png)
 
 ### Create new task
 

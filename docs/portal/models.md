@@ -1,6 +1,6 @@
 ## Models
 
-![](../_static/images/models/default.png)
+![](../_static/images/portal/models/default.png)
 
 ### Create new model repository
 
