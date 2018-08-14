@@ -53,14 +53,15 @@ The **type** is used to declare this analytic is an **APP** or an **API**. In de
 #### Create analytic with Online Code IDE
 
 1. Click the `CREATE` buttom.
-![analytic_create_button](../_static/images/portal/workspace/analytics/create_new_analytic.png)
+    ![analytic_create_button](../_static/images/portal/workspace/analytics/create_new_analytic.png)
 
 2. Name your new analytic.
-![analytic_naming_dialog](../_static/images/portal/workspace/analytics/create_new_analytic_naming.png)
+    ![analytic_naming_dialog](../_static/images/portal/workspace/analytics/create_new_analytic_naming.png)
 
+    ![online_code_ide_loading](../_static/images/portal/workspace/analytics/online_code_ide_loading.png)
 
-![online_code_ide_loading](../_static/images/portal/workspace/analytics/online_code_ide_loading.png)
-![online_code_ide](../_static/images/portal/workspace/analytics/online_code_ide.png)
+3. Now, we can code here.
+    ![online_code_ide](../_static/images/portal/workspace/analytics/online_code_ide.png)
 
 
 #### Install module with [Vendor](vendor.html) in private cloud
