@@ -55,11 +55,7 @@ The **type** is used to declare this analytic is an **APP** or an **API**. In de
 1. Click the `CREATE` buttom.
 ![analytic_create_button](../_static/images/portal/workspace/analytics/create_new_analytic.png)
 
-<<<<<<< HEAD
 2. Name your new analytic.
-=======
-
->>>>>>> 448d336fd17e1c97f9c0215d243e7e4a077ef00e
 ![analytic_naming_dialog](../_static/images/portal/workspace/analytics/create_new_analytic_naming.png)
 
 
