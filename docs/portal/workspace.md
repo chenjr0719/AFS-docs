@@ -55,14 +55,15 @@ The **type** is used to declare this analytic is an **APP** or an **API**. In de
 1. Click the `CREATE` buttom.
     ![analytic_create_button](../_static/images/portal/workspace/analytics/create_new_analytic.png)
 
-2. Name your new analytic.
+2. Enter the custom name of the analysis module, and press NEXT to confirm.
     ![analytic_naming_dialog](../_static/images/portal/workspace/analytics/create_new_analytic_naming.png)
 
     ![online_code_ide_loading](../_static/images/portal/workspace/analytics/online_code_ide_loading.png)
 
-3. Now, we can code here.
+3. When the newly established development & editing page appears in the workspace, it means the module has been successfully created and you can write the analysis module using Python programming language.
     ![online_code_ide](../_static/images/portal/workspace/analytics/online_code_ide.png)
 
+4. After filling in the program code, you can click UPLOAD to push analysis training model application to the platform in the form of an App. This APP will show in Workspace list when completely deployed.
 
 #### Install module with [Vendor](vendor.html) in private cloud
 
