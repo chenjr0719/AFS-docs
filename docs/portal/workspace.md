@@ -416,10 +416,11 @@ Here is a example like this :
 **Connect nodes**
 **Step 1 :** Connect nodes
 **Step 2 :** Click **Deploy** to save **Node-Red**
-
+**Step 3 :** Click **SAVE** to save solution
 ![](../_static/images/portal/workspace/solution/deploy_nodered.png)
 
 **Successful**
+![](../_static/images/portal/workspace/solution/save_successful.png)
 
 
 
