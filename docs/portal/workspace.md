@@ -414,8 +414,10 @@ Here is a example like this :
 ![](../_static/images/portal/workspace/solution/ota_node.png)
 
 **Connect nodes**
-**Step 1 :** Connect nodes
+**Step 1 :** Connect nodes 
+
 **Step 2 :** Click **Deploy** to save **Node-Red**
+
 **Step 3 :** Click **SAVE** to save solution
 ![](../_static/images/portal/workspace/solution/deploy_nodered.png)
 
