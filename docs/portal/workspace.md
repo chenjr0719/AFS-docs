@@ -83,7 +83,356 @@ This section will provide an example to use **Vendor** of AFS to install a modul
     ![install_module_from_vendor](../_static/images/portal/workspace/analytics/install_module_from_vendor.png)
 
 
-### Solutions
+
+#### Here is an example of **Decision Tree**
+#### Step1 : Create a new Online Code IDE 
+
+Refer detail to the **Create analytic with Online Code IDE** above
+
+#### Step2 : Manifest
+declaring a **manifest** at the first cell.
+Refer detail to the **Manifest** above
+
+```python =
+manifest = {
+    'memory': 1024,
+    'disk_quota': 2048,
+    'buildpack': 'python_buildpack',
+    'requirements': [
+        'numpy',
+        'pandas',
+        'scikit-learn',
+        'influxdb',
+        'requests',
+        'scipy',
+        'urllib3',
+        'afs'
+    ],
+    'type': 'API'
+}
+```
+![](../_static/images/portal/workspace/analytics/manifest.png)
 
 
-#### Create new solution
+
+#### Setting parameter 
+In **Online Code IDE** , you can create a node on **Node-Red** by **SDK** , and you can do **hyperparameter tuning** which you want to be adjusted by the user . The cell must be at **second cell**.
+
+```python =
+from afs import config_handler
+cfg = config_handler()
+cfg.set_param('criterion', type='string', required=True, default="gini")
+cfg.set_param('random_state', type='string', required=True, default="2")
+cfg.set_param('max_depth', type='string', required=True, default="3")
+cfg.set_param('K_fold', type='integer', required=True, default=10)
+
+cfg.set_param('model_name', type='string', required=True, default="dt_model.pkl")
+cfg.set_features(True)
+cfg.set_column('data')
+cfg.summary()
+
+```
+* Note : if you finish your code in this cell , you must run it .
+
+Describe the features that the SDK can produce ,
+here is an example of **Decision Tree**
+
+![](../_static/images/portal/workspace/analytics/sdk_to_node.png)
+
+
+#### Training model
+Here is an example of **Decision Tree**:
+import package:
+```python =
+from sklearn import tree
+from sklearn.cross_validation import train_test_split
+from sklearn import metrics
+from sklearn.externals import joblib
+from afs import models
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import LabelBinarizer
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
+
+import pandas as pd
+import numpy as np
+import json
+import requests
+```
+
+defined function:
+```python =
+#Find the best parameter to training model
+def grid(data , target , parameters_dt , cv):
+    clf = tree.DecisionTreeClassifier()
+    grid = GridSearchCV(estimator = clf, param_grid = parameters_dt, cv = cv, 
+                        scoring = 'accuracy')
+    grid.fit(data,target)
+    best_accuracy = grid.best_score_
+    best_params = grid.best_params_
+    return best_accuracy,best_params
+```
+
+```python =
+#Take the best parameter to training model
+def training_model(data , target ,best_params , best_accuracy ,model_name):
+    clf = tree.DecisionTreeClassifier(**best_params)
+    clf = clf.fit(data, target)
+    #save model
+    joblib.dump(clf , model_name)
+    client = models()
+    client.upload_model(model_name, accuracy=best_accuracy, loss=0.0, tags=dict(machine='dt'))
+
+    return model_name
+```
+
+Main program：
+```python =
+# POST /
+
+# Set flow architecture, REQUEST is the request including body and headers from client
+cfg.set_kernel_gateway(REQUEST)
+# Get the parameter from node-red setting
+
+criterion = str(cfg.get_param('criterion'))
+random_state = str(cfg.get_param('random_state'))
+max_depth = str(cfg.get_param('max_depth'))
+cv = cfg.get_param('K_fold')
+
+
+model_name = str(cfg.get_param('model_name'))
+select_feature = cfg.get_features_selected()
+data_column_name = cfg.get_features_numerical()
+target2 = cfg.get_features_target()
+
+labels_column_name = [x for x in select_feature if x not in data_column_name]
+labels_column_name = [x for x in labels_column_name if x not in target2]
+
+if(labels_column_name==[]):
+    labels_column_name=["No"]
+
+a1=["time"]
+labels_column_name = [x for x in labels_column_name if x not in a1]
+
+if "All" in labels_column_name:
+    labels_column_name.remove("All")
+
+if(data_column_name==[]):
+    data_column_name=["No"]
+
+criterion = criterion.split(",")
+random_state = random_state.split(",")
+max_depth = max_depth.split(",")
+
+random_state =list(map(int, random_state))
+max_depth = list(map(int, max_depth))
+
+parameters_dt = {"criterion" : criterion , "random_state" : random_state , "max_depth" : max_depth}
+
+
+
+# Get the data from request, and transform to DataFrame Type
+df = cfg.get_data()
+df = pd.DataFrame(df)
+
+target = np.array(df.loc[:,[target2]])
+
+if (data_column_name[0]=="All"):
+    all_df_column = [df.columns[i] for i in range(len(df.columns))]
+    if (labels_column_name[0]!="No"):
+        for i in range(len(labels_column_name)):
+            all_df_column.remove(labels_column_name[i])
+        all_df_column.remove(target2)
+    if (labels_column_name[0]=="No"):
+        all_df_column.remove(target2)
+    data = np.array(df.loc[:,all_df_column])
+
+elif (data_column_name[0]=="No"):
+    data = np.array([]).reshape(df.shape[0],0)
+    if (labels_column_name[0]!="No"):
+        for i in labels_column_name:   
+            if ((False in map((lambda x: type(x) == str), df[i]))==False):
+                label2 = LabelBinarizer().fit_transform(df[i])
+                data = np.hstack((data,label2))
+            if ((False in map((lambda x: type(x) == int), df[i]))==False):
+                target9 = OneHotEncoder( sparse=False ).fit_transform(df[i].values.reshape(-1,1))
+                data = np.hstack((data,target9))
+
+else:    
+    data = np.array(df.loc[:,data_column_name])
+    if (labels_column_name[0]!="No"):
+        for i in labels_column_name:   
+            if ((False in map((lambda x: type(x) == str), df[i]))==False):
+                label2 = LabelBinarizer().fit_transform(df[i])
+                data = np.hstack((data,label2))
+            if ((False in map((lambda x: type(x) == int), df[i]))==False):
+                target9 = OneHotEncoder( sparse=False ).fit_transform(df[i].values.reshape(-1,1))
+                data = np.hstack((data,target9))
+
+best_accuracy,best_params = grid(data , target , parameters_dt , cv)
+result = training_model(data , target ,best_params , best_accuracy ,model_name)
+result = str(result)
+
+df2 = pd.DataFrame([result], columns=['model_name'])
+df_dict = df2.to_dict()  
+
+
+# # Send the result to next node, and result is  DataFrame Type
+
+ret = cfg.next_node(df2, debug=True) 
+
+# The printing is the API response.
+```
+![](../_static/images/portal/workspace/analytics/dt_1.png)
+
+![](../_static/images/portal/workspace/analytics/dt_2.png)
+
+![](../_static/images/portal/workspace/analytics/dt_3.png)
+
+![](../_static/images/portal/workspace/analytics/dt_4.png)
+
+![](../_static/images/portal/workspace/analytics/dt_5.png)
+
+#### Save and Upload
+**First Step:**
+click Upper left corner button
+
+**Second Step:**
+click Upper right corner button
+
+![](../_static/images/portal/workspace/analytics/dt_to_save.png)
+
+![](../_static/images/portal/workspace/analytics/dt_save_inprogress.png)
+
+Upload successful
+
+![](../_static/images/portal/workspace/analytics/dt_save_running.png)
+
+
+### Solution
+**Pre-condition**
+we need to get firehose node and ota node 
+
+**Step 1 :** Click **Catalog** 
+**Step 2 :** Click ota's **DETAIL**
+![](../_static/images/portal/workspace/solution/click_ota.png)
+
+**Step 3 :** Click **SUBSCRIBE**
+**Step 4 :** Click **Catalog**
+
+![](../_static/images/portal/workspace/solution/subscribe_ota.png)
+
+**Step 5 :** Click firehose's **DETAIL**
+
+![](../_static/images/portal/workspace/solution/click_firehose.png)
+
+**Step 6 :** Click **SUBSCRIBE**
+**Step 7 :** Click **Workspaces**
+
+![](../_static/images/portal/workspace/solution/subscribe_firehose.png)
+
+Create **in progress**
+
+![](../_static/images/portal/workspace/solution/catalog_inprogress.png)
+
+**successful**
+
+![](../_static/images/portal/workspace/solution/catalog_running.png)
+
+
+
+
+### Creating a new solution
+**Step 1 :** Click **Workspaces**
+**Step 2 :** Click **SOLUTIONS**
+**Step 3 :** Click **CREATE**
+
+![](../_static/images/portal/workspace/solution/create_solution.png)
+
+**Step 4 :** Enter filename
+**Step 5 :** Click **CREATE**
+
+![](../_static/images/portal/workspace/solution/solution_name.png)
+
+
+**Step 6 :** Click **EDIT**
+
+![](../_static/images/portal/workspace/solution/goto_solution.png)
+
+**Successful**
+
+![](../_static/images/portal/workspace/solution/new_node_red.png)
+
+### Start training model
+In **Pre-condition** step , we create ota node and firehose node . Decision Tree example in the above , we create a Decision Tree node , sso_setting already exists . 
+
+Now we have  **sso_setting** node , **firehose_influxdb_query** node , **training_dt_model** node , and **ota** node
+
+You need pull four nodes such that **sso_setting** , **firehose_influxdb_query** , **training_dt_model** , and **ota**
+
+Here is a example like this :
+
+![](../_static/images/portal/workspace/solution/4node_innodered.png)
+
+**Setting node**
+1. **sso_setting**
+**Step 1 :** Enter **SSO User** and **SSO Password**
+**Step 2 :** If you complete the setup , please click **DONE** to save your setting
+
+![](../_static/images/portal/workspace/solution/sso_node.png)
+
+2. **firehose_influxdb_query** 
+**Step 1 :** Choose **Service Name** , **Service Key** , and enter **Query** condition
+**Step 2 :** If you complete the setup , please click **DONE** to save your setting
+
+![](../_static/images/portal/workspace/solution/firehose_node.png)
+
+
+3. **training_dt_model**
+
+**Step 1 :** Enter **parameters** to training model
+
+![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
+
+ 
+ **Step 2 :** Select **features** to training model
+**Step 3 :** Select **numerical data**
+
+![](../_static/images/portal/workspace/solution/dt_nodered_2.png)
+
+**Step 4 :** Select **target** to training model
+**Step 5 :** If you complete the setup , please click **DONE** to save your setting
+
+![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
+
+
+4. **ota**
+**Step 1 :** Choose **Device Name** and **Storage Name**
+**Step 2 :** If you complete the setup , please click **DONE** to save your setting
+
+![](../_static/images/portal/workspace/solution/ota_node.png)
+
+**Connect nodes**
+**Step 1 :** Connect nodes
+**Step 2 :** Click **Deploy** to save **Node-Red**
+
+![](../_static/images/portal/workspace/solution/deploy_nodered.png)
+
+**Successful**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
