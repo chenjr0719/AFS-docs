@@ -311,14 +311,17 @@ Upload successful
 
 
 ### Solution
+
 **Pre-condition**
 we need to get firehose node and ota node 
 
 **Step 1 :** Click **Catalog** 
+
 **Step 2 :** Click ota's **DETAIL**
 ![](../_static/images/portal/workspace/solution/click_ota.png)
 
 **Step 3 :** Click **SUBSCRIBE**
+
 **Step 4 :** Click **Catalog**
 
 ![](../_static/images/portal/workspace/solution/subscribe_ota.png)
@@ -328,6 +331,7 @@ we need to get firehose node and ota node
 ![](../_static/images/portal/workspace/solution/click_firehose.png)
 
 **Step 6 :** Click **SUBSCRIBE**
+
 **Step 7 :** Click **Workspaces**
 
 ![](../_static/images/portal/workspace/solution/subscribe_firehose.png)
@@ -344,13 +348,17 @@ Create **in progress**
 
 
 ### Creating a new solution
+
 **Step 1 :** Click **Workspaces**
+
 **Step 2 :** Click **SOLUTIONS**
+
 **Step 3 :** Click **CREATE**
 
 ![](../_static/images/portal/workspace/solution/create_solution.png)
 
 **Step 4 :** Enter filename
+
 **Step 5 :** Click **CREATE**
 
 ![](../_static/images/portal/workspace/solution/solution_name.png)
@@ -377,13 +385,17 @@ Here is a example like this :
 
 **Setting node**
 1. **sso_setting**
+
 **Step 1 :** Enter **SSO User** and **SSO Password**
-**Step 2 :** If you complete the setup , please click **DONE** to save your setting
+
+**Step 2 :** If you complete the setup , please click 
+**DONE** to save your setting
 
 ![](../_static/images/portal/workspace/solution/sso_node.png)
 
 2. **firehose_influxdb_query** 
 **Step 1 :** Choose **Service Name** , **Service Key** , and enter **Query** condition
+
 **Step 2 :** If you complete the setup , please click **DONE** to save your setting
 
 ![](../_static/images/portal/workspace/solution/firehose_node.png)
@@ -396,24 +408,30 @@ Here is a example like this :
 ![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
 
  
- **Step 2 :** Select **features** to training model
+**Step 2 :** Select **features** to training model
+
 **Step 3 :** Select **numerical data**
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_2.png)
 
 **Step 4 :** Select **target** to training model
-**Step 5 :** If you complete the setup , please click **DONE** to save your setting
+
+**Step 5 :** If you complete the setup , please click 
+**DONE** to save your setting
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
 
 
 4. **ota**
+
 **Step 1 :** Choose **Device Name** and **Storage Name**
+
 **Step 2 :** If you complete the setup , please click **DONE** to save your setting
 
 ![](../_static/images/portal/workspace/solution/ota_node.png)
 
 **Connect nodes**
+
 **Step 1 :** Connect nodes 
 
 **Step 2 :** Click **Deploy** to save **Node-Red**
