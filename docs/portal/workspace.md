@@ -311,7 +311,6 @@ Upload successful
 
 
 ### Solution
-
 **Pre-condition**
 we need to get firehose node and ota node 
 
@@ -394,7 +393,9 @@ Here is a example like this :
 ![](../_static/images/portal/workspace/solution/sso_node.png)
 
 2. **firehose_influxdb_query** 
+
 **Step 1 :** Choose **Service Name** , **Service Key** , and enter **Query** condition
+
 
 **Step 2 :** If you complete the setup , please click **DONE** to save your setting
 
