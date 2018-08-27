@@ -275,14 +275,16 @@ result = training_model(data , target ,best_params , best_accuracy ,model_name)
 result = str(result)
 
 df2 = pd.DataFrame([result], columns=['model_name'])
-df_dict = df2.to_dict()  
+# df_dict = df2.to_dict()  
 
 
 # # Send the result to next node, and result is  DataFrame Type
 
-ret = cfg.next_node(df2, debug=True) 
+ret = cfg.next_node(df2, debug=False) 
 
-# The printing is the API response.
+# # The printing is the API response.
+print(json.dumps(ret))
+
 ```
 ![](../_static/images/portal/workspace/analytics/dt_1.png)
 
