@@ -56,6 +56,8 @@ When the task successed , you can see like this
 
 ![](../_static/images/portal/tasks/task_run_successful.png)
 
+* If timeout occurs, please adjust the interval size because the training time is greater than interval
+
 ### Task detail
 
 #### Pause task
