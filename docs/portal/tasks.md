@@ -22,7 +22,7 @@
 
 ![](../_static/images/portal/tasks/task_type.png)
 
-**Step 6 :** Choose **Solution Instance**(You can choose which you create solution , and you can refer https://afs-docs.readthedocs.io/en/latest/portal/workspace.html#solution to create your solution )
+**Step 6 :** Choose **Solution Instance**(You can choose which you create solution , and you can refer [Solution](https://afs-docs.readthedocs.io/en/latest/portal/workspace.html) to create your solution )
 
 **Step 7 :** Click **NEXT**
 
