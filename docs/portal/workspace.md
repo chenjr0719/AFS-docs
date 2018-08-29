@@ -7,7 +7,7 @@
 
 #### Online Code IDE
 
-In **AFS**, we provide a powerful **Online Code IDE** based on [Jupyter](http://jupyter.org/) to develop your analytic on the cloud with complete **EnSaaS** support.
+In **AFS**, we provide a powerful **Online Code IDE** based on [Jupyter](http://jupyter.org/) to develop your analytic on the cloud.
 
 
 #### auth_code
@@ -45,9 +45,9 @@ In this example, **memory** and **disk_quota** are also assigned to 2048MB. If s
 
 > **Note:** The default value of **disk_quota** is **2048MB** to avoid insufficient disk space when installing modules. If you set **disk_quota** less than 2048MB, the value will be overridden to 2048MB.
 
-The **requirements** are the most important part in analytic develop. As native python develop, when you need some external modules, you can use **requirements.txt** to record all dependencies of your analytic.(more information can be found at [pip docs](https://pip.pypa.io/en/stable/user_guide/#id1)) . Provide a list of **requirements** can obtain the same effect when developing analytic by **AFS**.
+The **requirements** are the most important part in analytic develop. As native python develop, when you need some external modules, you can use **requirements.txt** to record all dependencies of your analytic. (more information can be found at [pip docs](https://pip.pypa.io/en/stable/user_guide/#id1)). Provide a list of **requirements** can obtain the same effect when developing analytic by **AFS**.
 
-The **type** is used to declare this analytic is an **APP** or an **API**. In default, all analytic will be assigned as **APP** type. But if you want your analytic serve as an **API**(and also write in any web framework), you need set **type** to **API** to host your analytic on **WISE-PaaS**.
+The **Type** is used to declare this analytic is an **APP** or an **API**. In default, all analytic will be assigned as **APP** type. But if you want your analytic serve as an **API**(and also write in any web framework), you need set **type** to **API** to host your analytic on **WISE-PaaS**.
 
 
 #### Create analytic with Online Code IDE
@@ -63,7 +63,8 @@ The **type** is used to declare this analytic is an **APP** or an **API**. In de
 3. When the newly established development & editing page appears in the workspace, it means the module has been successfully created and you can write the analysis module using Python programming language.
     ![online_code_ide](../_static/images/portal/workspace/analytics/online_code_ide.png)
 
-4. After filling in the program code, you can click UPLOAD to push analysis training model application to the platform in the form of an App. This APP will show in Workspace list when completely deployed.
+4. After filling in the program code, you can click the icon ![](../_static/images/portal/workspace/analytics/icon_01.png) to save it. Next, click `SAVE` button to push analysis training model application to the platform in the form of an App. This APP will show in Workspace list when completely deployed.
+    ![online_code_ide](../_static/images/portal/workspace/analytics/jn_save.png)
 
 #### Install module with [Vendor](vendor.html) in private cloud
 
@@ -85,13 +86,13 @@ This section will provide an example to use **Vendor** of AFS to install a modul
 
 
 #### Here is an example of **Decision Tree**
-#### Step1 : Create a new Online Code IDE 
+#### Step1: Create a new Online Code IDE 
 
-Refer detail to the **Create analytic with Online Code IDE** above
+Refer detail to the **Create analytic with Online Code IDE** above.
 
-#### Step2 : Manifest
-declaring a **manifest** at the first cell.
-Refer detail to the **Manifest** above
+#### Step2: Manifest
+Declaring a **manifest** at the first cell.
+Refer detail to the **Manifest** above.
 
 ```python =
 manifest = {
@@ -116,7 +117,7 @@ manifest = {
 
 
 #### Setting parameter 
-In **Online Code IDE** , you can create a node on **Node-Red** by **SDK** , and you can do **hyperparameter tuning** which you want to be adjusted by the user . The cell must be at **second cell**.
+In **Online Code IDE**, you can create a node on **Node-RED** by **SDK**, and you can provide the **Hyper-Parameter Tuning** for user. The following code must be at **second cell**.
 
 ```python =
 from afs import config_handler
@@ -132,10 +133,9 @@ cfg.set_column('data')
 cfg.summary()
 
 ```
-* Note : if you finish your code in this cell , you must run it .
+* Note: If you finish your code in this cell, you must run it.
 
-Describe the features that the SDK can produce ,
-here is an example of **Decision Tree**
+Describe the features that the SDK can produce, here is an example of **Decision Tree**.
 
 ![](../_static/images/portal/workspace/analytics/sdk_to_node.png)
 
@@ -161,10 +161,10 @@ import json
 import requests
 ```
 
-defined function:
+Defined function:
 ```python =
 #Find the best parameter to training model
-def grid(data , target , parameters_dt , cv):
+def grid(data, target, parameters_dt, cv):
     clf = tree.DecisionTreeClassifier()
     grid = GridSearchCV(estimator = clf, param_grid = parameters_dt, cv = cv, 
                         scoring = 'accuracy')
@@ -176,24 +176,24 @@ def grid(data , target , parameters_dt , cv):
 
 ```python =
 #Take the best parameter to training model
-def training_model(data , target ,best_params , best_accuracy ,model_name):
+def training_model(data, target,best_params, best_accuracy,model_name):
     clf = tree.DecisionTreeClassifier(**best_params)
     clf = clf.fit(data, target)
     #save model
-    joblib.dump(clf , model_name)
+    joblib.dump(clf, model_name)
     client = models()
     client.upload_model(model_name, accuracy=best_accuracy, loss=0.0, tags=dict(machine='dt'))
 
     return model_name
 ```
 
-Main program：
+Main program:
 ```python =
 # POST /
 
 # Set flow architecture, REQUEST is the request including body and headers from client
 cfg.set_kernel_gateway(REQUEST)
-# Get the parameter from node-red setting
+# Get the parameter from Node-RED setting
 
 criterion = str(cfg.get_param('criterion'))
 random_state = str(cfg.get_param('random_state'))
@@ -228,7 +228,7 @@ max_depth = max_depth.split(",")
 random_state =list(map(int, random_state))
 max_depth = list(map(int, max_depth))
 
-parameters_dt = {"criterion" : criterion , "random_state" : random_state , "max_depth" : max_depth}
+parameters_dt = {"criterion": criterion, "random_state": random_state, "max_depth": max_depth}
 
 
 
@@ -270,8 +270,8 @@ else:
                 target9 = OneHotEncoder( sparse=False ).fit_transform(df[i].values.reshape(-1,1))
                 data = np.hstack((data,target9))
 
-best_accuracy,best_params = grid(data , target , parameters_dt , cv)
-result = training_model(data , target ,best_params , best_accuracy ,model_name)
+best_accuracy,best_params = grid(data, target, parameters_dt, cv)
+result = training_model(data, target,best_params, best_accuracy,model_name)
 result = str(result)
 
 df2 = pd.DataFrame([result], columns=['model_name'])
@@ -320,33 +320,34 @@ Before creating a solution, there are preparation we msut get ready.
 In the beginning, subscribing ota node and firehose node form Catalog is required.
 
 Now, we subscribe the ota node firstly.
-**Step 1. :** Click **Catalog** 
 
-**Step 2. :** Click ota's **DETAIL**
+**Step 1.:** Click **Catalog**. 
+
+**Step 2.:** Click ota's **DETAIL**.
 ![](../_static/images/portal/workspace/solution/click_ota.png)
 
-**Step 3. :** Click **SUBSCRIBE**, and we subscribe the ota node successfully.
+**Step 3.:** Click **SUBSCRIBE**, and we subscribe the ota node successfully.
 
 Here we subscribe the firehose node.
-**Step 4. :** Click **Catalog**
+**Step 4.:** Click **Catalog**.
 
 ![](../_static/images/portal/workspace/solution/subscribe_ota.png)
 
-**Step 5. :** Click firehose's **DETAIL**
+**Step 5.:** Click firehose's **DETAIL**.
 
 ![](../_static/images/portal/workspace/solution/click_firehose.png)
 
-**Step 6. :** Click **SUBSCRIBE**, and we subscribe the firehose node successfully.
+**Step 6.:** Click **SUBSCRIBE**, and we subscribe the firehose node successfully.
 
-**Step 7. :** Click **Workspace**, go back to workspace
+**Step 7.:** Click **Workspace**, go back to workspace.
 
 ![](../_static/images/portal/workspace/solution/subscribe_firehose.png)
 
-Create **in progress**
+Now, we can see the new Analytic APIs are creating.
 
 ![](../_static/images/portal/workspace/solution/catalog_inprogress.png)
 
-**successful**
+The Analytic APIs are created successfully.
 
 ![](../_static/images/portal/workspace/solution/catalog_running.png)
 
@@ -355,113 +356,95 @@ Create **in progress**
 
 ### Creating a new solution
 
-**Step 1. :** Click **Workspaces**
+**Step 1.:** Click **Workspaces**.
 
-**Step 2. :** Click **SOLUTIONS**
+**Step 2.:** Click **SOLUTIONS**.
 
-**Step 3. :** Click **CREATE**
+**Step 3.:** Click **CREATE**.
 
 ![](../_static/images/portal/workspace/solution/create_solution.png)
 
-**Step 4. :** Enter filename
+**Step 4.:** Enter the filename.
 
-**Step 5. :** Click **CREATE**
+**Step 5.:** Click **CREATE** to create the solution.
 
 ![](../_static/images/portal/workspace/solution/solution_name.png)
 
 
-**Step 6. :** Click **EDIT**
+**Step 6.:** Click **EDIT**.
 
 ![](../_static/images/portal/workspace/solution/goto_solution.png)
 
-**Successful**
+Now, we can see the Node-RED UI, and start to create the flow.
 
 ![](../_static/images/portal/workspace/solution/new_node_red.png)
 
 ### Start training model
-In **Pre-condition** step , we create ota node and firehose node . Decision Tree example in the above , we create a Decision Tree node , sso_setting already exists . 
+In **Pre-condition** step, we create ota node and firehose node. Decision Tree example in the above, we create a Decision Tree node, sso_setting already exists. 
 
-Now we have  **sso_setting** node , **firehose_influxdb_query** node , **training_dt_model** node , and **ota** node
+Now, we have **sso_setting** node, **firehose_influxdb_query** node, **training_dt_model** node, and **ota** node.
 
-You need pull four nodes such that **sso_setting** , **firehose_influxdb_query** , **training_dt_model** , and **ota**
+You need pull four nodes such that **sso_setting**, **firehose_influxdb_query**, **training_dt_model**, and **ota**.
 
-Here is a example like this :
+Here is a example like this:
 
 ![](../_static/images/portal/workspace/solution/4node_innodered.png)
 
-**Setting node**
-1. **sso_setting**
+**Setting the nodes**
+1. The **sso_setting** node
 
-**Step 1. :** Enter **SSO User** and **SSO Password**
+**Step 1.:** Enter **SSO User** and **SSO Password**.
 
-**Step 2. :** If you complete the setup , please click 
-**DONE** to save your setting
+**Step 2.:** If you complete the setup, please click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/sso_node.png)
 
-2. **firehose_influxdb_query** 
+2. The **firehose_influxdb_query** node
 
-**Step 1. :** Choose **Service Name** , **Service Key** , and enter **Query** condition
+**Step 1.:** Choose **Service Name**, **Service Key**, and enter **Query** condition.
 
-
-**Step 2. :** If you complete the setup , please click **DONE** to save your setting
+**Step 2.:** If you complete the setup, please click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/firehose_node.png)
 
 
-3. **training_dt_model**
+3. The **training_dt_model** node
 
-**Step 1. :** Enter **parameters** to training model
+**Step 1.:** Enter **parameters** to training model.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
 
  
-**Step 2. :** Select **features** to training model
+**Step 2.:** Select **features** to training model.
 
-**Step 3. :** Select **numerical data**
+**Step 3.:** Select **numerical data**.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_2.png)
 
-**Step 4. :** Select **target** to training model
+**Step 4.:** Select **target** to training model.
 
-**Step 5. :** If you complete the setup , please click 
-**DONE** to save your setting
+**Step 5.:** If you complete the setup, please click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
 
 
-4. **ota**
+4. The **ota** node
 
-**Step 1. :** Choose **Device Name** and **Storage Name**
+**Step 1.:** Choose **Device Name** and **Storage Name**.
 
-**Step 2. :** If you complete the setup , please click **DONE** to save your setting
+**Step 2.:** If you complete the setup, please click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/ota_node.png)
 
-**Connect nodes**
+**Nodes connecting**
 
-**Step 1. :** Connect nodes 
+**Step 1.:** Connect nodes.
 
-**Step 2. :** Click **Deploy** to save **Node-Red**
+**Step 2.:** Click **Deploy** to save **Node-RED**.
 
-**Step 3. :** Click **SAVE** to save solution
+**Step 3.:** Click **SAVE** to save solution.
 ![](../_static/images/portal/workspace/solution/deploy_nodered.png)
 
 **Successful**
 ![](../_static/images/portal/workspace/solution/save_successful.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
