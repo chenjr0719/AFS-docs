@@ -52,7 +52,7 @@ The **Type** is used to declare this analytic is an **APP** or an **API**. In de
 
 #### Create analytic with Online Code IDE
 
-1. Click the `CREATE` buttom.
+1. Click the `CREATE` button.
     ![analytic_create_button](../_static/images/portal/workspace/analytics/create_new_analytic.png)
 
 2. Enter the custom name of the analysis module, and press NEXT to confirm.
@@ -86,11 +86,11 @@ This section will provide an example to use **Vendor** of AFS to install a modul
 
 
 #### Here is an example of **Decision Tree**
-#### Step1: Create a new Online Code IDE 
+#### Step 1: Create a new Online Code IDE 
 
 Refer detail to the **Create analytic with Online Code IDE** above.
 
-#### Step2: Manifest
+#### Step 2: Manifest
 Declaring a **manifest** at the first cell.
 Refer detail to the **Manifest** above.
 
@@ -299,10 +299,10 @@ print(json.dumps(ret))
 #### Save and upload the Analytic App
 After we edit the Analytic App, we must save and upload it as follow steps:
 
-**Step 1.:**
+**Step 1:**
 Click the icon ![](../_static/images/portal/workspace/analytics/icon_01.png) is in upper left corner.
 
-**Step 2.:**
+**Step 2:**
 Click `SAVE`, and we are uploading the Analytic App now.
 
 ![](../_static/images/portal/workspace/analytics/dt_to_save.png)
@@ -318,28 +318,28 @@ After a second, we can see that it's successful to upload.
 **Pre-condition**
 Before creating a solution, there are preparation we msut get ready.
 In the beginning, subscribing ota node and firehose node form Catalog is required.
-
 Now, we subscribe the ota node firstly.
 
-**Step 1.:** Click **Catalog**. 
+**Step 1:** Click **Catalog**. 
 
-**Step 2.:** Click ota's **DETAIL**.
+**Step 2:** Click ota's **DETAIL**.
 ![](../_static/images/portal/workspace/solution/click_ota.png)
 
-**Step 3.:** Click **SUBSCRIBE**, and we subscribe the ota node successfully.
+**Step 3:** Click **SUBSCRIBE**, and we subscribe the ota node successfully.
 
 Here we subscribe the firehose node.
-**Step 4.:** Click **Catalog**.
+
+**Step 4:** Click **Catalog**.
 
 ![](../_static/images/portal/workspace/solution/subscribe_ota.png)
 
-**Step 5.:** Click firehose's **DETAIL**.
+**Step 5:** Click firehose's **DETAIL**.
 
 ![](../_static/images/portal/workspace/solution/click_firehose.png)
 
-**Step 6.:** Click **SUBSCRIBE**, and we subscribe the firehose node successfully.
+**Step 6:** Click **SUBSCRIBE**, and we subscribe the firehose node successfully.
 
-**Step 7.:** Click **Workspace**, go back to workspace.
+**Step 7:** Click **Workspace**, go back to workspace.
 
 ![](../_static/images/portal/workspace/solution/subscribe_firehose.png)
 
@@ -356,22 +356,22 @@ The Analytic APIs are created successfully.
 
 ### Creating a new solution
 
-**Step 1.:** Click **Workspaces**.
+**Step 1:** Click **Workspaces**.
 
-**Step 2.:** Click **SOLUTIONS**.
+**Step 2:** Click **SOLUTIONS**.
 
-**Step 3.:** Click **CREATE**.
+**Step 3:** Click **CREATE**.
 
 ![](../_static/images/portal/workspace/solution/create_solution.png)
 
-**Step 4.:** Enter the filename.
+**Step 4:** Enter the filename.
 
-**Step 5.:** Click **CREATE** to create the solution.
+**Step 5:** Click **CREATE** to create the solution.
 
 ![](../_static/images/portal/workspace/solution/solution_name.png)
 
 
-**Step 6.:** Click **EDIT**.
+**Step 6:** Click **EDIT**.
 
 ![](../_static/images/portal/workspace/solution/goto_solution.png)
 
@@ -393,56 +393,56 @@ Here is a example like this:
 **Setting the nodes**
 1. The **sso_setting** node
 
-**Step 1.:** Enter **SSO User** and **SSO Password**.
+**Step 1:** Enter **SSO User** and **SSO Password**.
 
-**Step 2.:** If you complete the setup, please click **DONE** to save your setting.
+**Step 2:** If you complete the setup, please click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/sso_node.png)
 
 2. The **firehose_influxdb_query** node
 
-**Step 1.:** Choose **Service Name**, **Service Key**, and enter **Query** condition.
+**Step 1:** Choose **Service Name**, **Service Key**, and enter **Query** condition.
 
-**Step 2.:** If you complete the setup, please click **DONE** to save your setting.
+**Step 2:** If you complete the setup, please click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/firehose_node.png)
 
 
 3. The **training_dt_model** node
 
-**Step 1.:** Enter **parameters** to training model.
+**Step 1:** Enter **parameters** to training model.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
 
  
-**Step 2.:** Select **features** to training model.
+**Step 2:** Select **features** to training model.
 
-**Step 3.:** Select **numerical data**.
+**Step 3:** Select **numerical data**.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_2.png)
 
-**Step 4.:** Select **target** to training model.
+**Step 4:** Select **target** to training model.
 
-**Step 5.:** If you complete the setup, please click **DONE** to save your setting.
+**Step 5:** If you complete the setup, please click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
 
 
 4. The **ota** node
 
-**Step 1.:** Choose **Device Name** and **Storage Name**.
+**Step 1:** Choose **Device Name** and **Storage Name**.
 
-**Step 2.:** If you complete the setup, please click **DONE** to save your setting.
+**Step 2:** If you complete the setup, please click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/ota_node.png)
 
 **Nodes connecting**
 
-**Step 1.:** Connect nodes.
+**Step 1:** Connect nodes.
 
-**Step 2.:** Click **Deploy** to save **Node-RED**.
+**Step 2:** Click **Deploy** to save **Node-RED**.
 
-**Step 3.:** Click **SAVE** to save solution.
+**Step 3:** Click **SAVE** to save solution.
 ![](../_static/images/portal/workspace/solution/deploy_nodered.png)
 
 **Successful**
