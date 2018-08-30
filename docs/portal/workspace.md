@@ -354,7 +354,10 @@ The Analytic APIs are created successfully.
 
 
 
-### Creating a new solution
+#### Creating a new solution
+Now, we start to create a new solution. 
+
+There are the steps as follows:
 
 **Step 1:** Click **Workspaces**.
 
@@ -388,7 +391,7 @@ Here is an example as follows:
 ![](../_static/images/portal/workspace/solution/4node_innodered.png)
 
 **Setup the nodes**
-1. The **sso_setting** node
+1.  The **sso_setting** node
 
 **Step 1:** Enter **SSO User** and **SSO Password**.
 
@@ -396,7 +399,7 @@ Here is an example as follows:
 
 ![](../_static/images/portal/workspace/solution/sso_node.png)
 
-2. The **firehose_influxdb_query** node
+2.  The **firehose_influxdb_query** node
 
 **Step 1:** Choose **Service Name**, **Service Key**, and enter **Query** condition.
 
@@ -405,14 +408,13 @@ Here is an example as follows:
 ![](../_static/images/portal/workspace/solution/firehose_node.png)
 
 
-3. The **training_dt_model** node
+3.  The **training_dt_model** node
 
 **Step 1:** Enter **parameters** to training model.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
 
- 
-**Step 2:** Select **features** to training model.
+ **Step 2:** Select **features** to training model.
 
 **Step 3:** Select **numerical data**.
 
@@ -425,7 +427,7 @@ Here is an example as follows:
 ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
 
 
-4. The **ota** node
+4.  The **ota** node
 
 **Step 1:** Choose **Device Name** and **Storage Name**.
 
