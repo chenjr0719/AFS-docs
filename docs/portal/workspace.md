@@ -408,41 +408,41 @@ Here is an example as follows:
     ![](../_static/images/portal/workspace/solution/firehose_node.png)
 
 
-* The **training_dt_model** node
+3. The **training_dt_model** node
 
-**Step 1:** Enter **parameters** to training model.
+    **Step 1:** Enter **parameters** to training model.
 
-![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
+    ![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
 
-**Step 2:** Select **features** to training model.
+    **Step 2:** Select **features** to training model.
 
-**Step 3:** Select **numerical data**.
+    **Step 3:** Select **numerical data**.
 
-![](../_static/images/portal/workspace/solution/dt_nodered_2.png)
+    ![](../_static/images/portal/workspace/solution/dt_nodered_2.png)
 
-**Step 4:** Select **target** to training model.
+    **Step 4:** Select **target** to training model.
 
-**Step 5:** Please click **DONE** to save your setting when you complete the setup.
+    **Step 5:** Please click **DONE** to save your setting when you complete the setup.
 
-![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
+    ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
 
 
-* The **ota** node
+4. The **ota** node
 
-**Step 1:** Choose **Device Name** and **Storage Name**.
+    **Step 1:** Choose **Device Name** and **Storage Name**.
 
-**Step 2:** Please click **DONE** to save the setting when you complete the setup.
+    **Step 2:** Please click **DONE** to save the setting when you complete the setup.
 
-![](../_static/images/portal/workspace/solution/ota_node.png)
+    ![](../_static/images/portal/workspace/solution/ota_node.png)
 
-**Nodes connecting**
+5. **Nodes connecting**
 
-**Step 1:** Connect nodes.
+    **Step 1:** Connect nodes.
 
-**Step 2:** Click **Deploy** to save **Node-RED**.
+    **Step 2:** Click **Deploy** to save **Node-RED**.
 
-**Step 3:** Click **SAVE** to save solution.
-![](../_static/images/portal/workspace/solution/deploy_nodered.png)
+    **Step 3:** Click **SAVE** to save solution.
+    ![](../_static/images/portal/workspace/solution/deploy_nodered.png)
 
 We create the solution successfully when it shows **Update complete** in the bottom right.
 ![](../_static/images/portal/workspace/solution/save_successful.png)
