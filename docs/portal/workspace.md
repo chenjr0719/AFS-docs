@@ -354,7 +354,7 @@ The Analytic APIs are created successfully.
 
 
 
-#### Creating a new solution
+#### Creating a new solution instance
 Now, we start to create a new solution. 
 
 There are the steps as follows:
@@ -382,7 +382,7 @@ Now, we can see the Node-RED UI, and start to create the flow.
 
 ![](../_static/images/portal/workspace/solution/new_node_red.png)
 
-#### Start training model
+#### Start create the solution by Online Flow IDE
 In the **Pre-condition** step, we create ota node and firehose node. AS the example in **Example of Code IDE**, we create a Decision Tree node. The sso_setting already exists. 
 Now, we have **sso_setting** node, **firehose_influxdb_query** node, **training_dt_model** node, and **ota** node.
 You need pull four nodes such that **sso_setting**, **firehose_influxdb_query**, **training_dt_model**, and **ota**.
