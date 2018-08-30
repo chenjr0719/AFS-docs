@@ -313,7 +313,7 @@ Wait a second, we can see that it's successful to upload.
 
 ![](../_static/images/portal/workspace/analytics/dt_save_running.png)
 
-
+----------------------------------------------------------
 ### Solution
 **Pre-condition**
 Before creating a solution, there are preparations we msut get ready.
@@ -383,7 +383,7 @@ Now, we can see the Node-RED UI, and start to create the flow.
 ![](../_static/images/portal/workspace/solution/new_node_red.png)
 
 #### Start training model
-In **Pre-condition** step, we create ota node and firehose node. Decision Tree example in the above, we create a Decision Tree node, sso_setting already exists. 
+In the **Pre-condition** step, we create ota node and firehose node. AS the example in **Example of Code IDE**, we create a Decision Tree node. The sso_setting already exists. 
 Now, we have **sso_setting** node, **firehose_influxdb_query** node, **training_dt_model** node, and **ota** node.
 You need pull four nodes such that **sso_setting**, **firehose_influxdb_query**, **training_dt_model**, and **ota**.
 
@@ -391,30 +391,30 @@ Here is an example as follows:
 ![](../_static/images/portal/workspace/solution/4node_innodered.png)
 
 **Setup the nodes**
-1.  The **sso_setting** node
+1. The **sso_setting** node
 
-**Step 1:** Enter **SSO User** and **SSO Password**.
+    **Step 1:** Enter **SSO User** and **SSO Password**.
 
-**Step 2:** Click **DONE** to save the setting.
+    **Step 2:** Click **DONE** to save the setting.
 
-![](../_static/images/portal/workspace/solution/sso_node.png)
+    ![](../_static/images/portal/workspace/solution/sso_node.png)
 
-2.  The **firehose_influxdb_query** node
+2. The **firehose_influxdb_query** node
 
-**Step 1:** Choose **Service Name**, **Service Key**, and enter **Query** condition.
+    **Step 1:** Choose **Service Name**, **Service Key**, and enter **Query** condition.
 
-**Step 2:** Click **DONE** to save your setting.
+    **Step 2:** Click **DONE** to save your setting.
 
-![](../_static/images/portal/workspace/solution/firehose_node.png)
+    ![](../_static/images/portal/workspace/solution/firehose_node.png)
 
 
-3.  The **training_dt_model** node
+* The **training_dt_model** node
 
 **Step 1:** Enter **parameters** to training model.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
 
- **Step 2:** Select **features** to training model.
+**Step 2:** Select **features** to training model.
 
 **Step 3:** Select **numerical data**.
 
@@ -427,7 +427,7 @@ Here is an example as follows:
 ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
 
 
-4.  The **ota** node
+* The **ota** node
 
 **Step 1:** Choose **Device Name** and **Storage Name**.
 
