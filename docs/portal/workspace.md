@@ -28,7 +28,7 @@ The output:
 
 In **Online Code IDE**, you can define some customize configurations like **memory**, **disk**, or **requirements** for your analytic by declaring a **manifest** at the first cell.
 
-Here is an basic example:
+An example is as follows:
 ```python
 manifest = {
     'memory': 2048,
@@ -72,7 +72,9 @@ In python develop, we can use `pip install $MODULE` to install all required modu
 
 This restrict force all required modules should provide an offline distribution file in the private cloud when developing in **Online Code IDE** and save the source code to an analytic app.
 
-This section will provide an example to use **Vendor** of AFS to install a module in  **Online Code IDE**. Assume the module is already uploaded to **AFS**, if not, please reference documentation of [Vendor](vendor.html) to upload module.
+This section will provide an example to use **Vendor** of AFS to install a module in **Online Code IDE**. Assume the module is already uploaded to **AFS**, if not, please reference documentation of [Vendor](vendor.html) to upload module.
+
+* Note: When using **Vendor** of AFS to install a module in **Online Code IDE**, we must add the module in the requirements of **manifest**, please refer the manifest section. 
 
 1. Right-click on the module and copy the url.
     ![copy_module_url](../_static/images/portal/vendor/check_module.png)
@@ -85,14 +87,15 @@ This section will provide an example to use **Vendor** of AFS to install a modul
 
 
 
-#### Here is an example of **Decision Tree**
-#### Step 1: Create a new Online Code IDE 
+#### Example of Online Code IDE
 
-Refer detail to the **Create analytic with Online Code IDE** above.
+Here is an example to create Analytic API by Online Code IDE.
 
-#### Step 2: Manifest
-Declaring a **manifest** at the first cell.
-Refer detail to the **Manifest** above.
+**Step 1:** Create a new Online Code IDE. 
+About the detail, please refer to the **Create analytic with Online Code IDE** section.
+
+**Step 2:** Declare the manifest.
+Declaring the **manifest** at the first cell. About the detail, please refer to the **Manifest** section.
 
 ```python =
 manifest = {
@@ -115,8 +118,7 @@ manifest = {
 ![](../_static/images/portal/workspace/analytics/manifest.png)
 
 
-
-#### Setting parameter 
+**Step 3:** Setting parameter of the analytic method. (We use the decision tree method for the example)
 In **Online Code IDE**, you can create a node on **Node-RED** by **SDK**, and you can provide the **Hyper-Parameter Tuning** for user. The following code must be at **second cell**.
 
 ```python =
@@ -133,7 +135,7 @@ cfg.set_column('data')
 cfg.summary()
 
 ```
-* Note: If you finish your code in this cell, you must run it.
+* Note: When editing is complete in this cell, you must run it.
 
 Describe the features that the SDK can produce, here is an example of **Decision Tree**.
 
@@ -296,7 +298,7 @@ print(json.dumps(ret))
 
 ![](../_static/images/portal/workspace/analytics/dt_5.png)
 
-#### Save and upload the Analytic App
+#### Save and upload the Analytic API
 After we edit the Analytic App, we must save and upload it as follow steps:
 
 **Step 1:**
@@ -316,7 +318,7 @@ After a second, we can see that it's successful to upload.
 
 ### Solution
 **Pre-condition**
-Before creating a solution, there are preparation we msut get ready.
+Before creating a solution, there are preparations we msut get ready.
 In the beginning, subscribing ota node and firehose node form Catalog is required.
 Now, we subscribe the ota node firstly.
 
@@ -327,7 +329,7 @@ Now, we subscribe the ota node firstly.
 
 **Step 3:** Click **SUBSCRIBE**, and we subscribe the ota node successfully.
 
-Here we subscribe the firehose node.
+Next, we subscribe the firehose node.
 
 **Step 4:** Click **Catalog**.
 
@@ -395,7 +397,7 @@ Here is a example like this:
 
 **Step 1:** Enter **SSO User** and **SSO Password**.
 
-**Step 2:** If you complete the setup, please click **DONE** to save your setting.
+**Step 2:** Click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/sso_node.png)
 
@@ -403,7 +405,7 @@ Here is a example like this:
 
 **Step 1:** Choose **Service Name**, **Service Key**, and enter **Query** condition.
 
-**Step 2:** If you complete the setup, please click **DONE** to save your setting.
+**Step 2:** Click **DONE** to save your setting.
 
 ![](../_static/images/portal/workspace/solution/firehose_node.png)
 
