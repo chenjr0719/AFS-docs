@@ -142,7 +142,7 @@ Describe the features that the SDK can produce, here is an example of **Decision
 ![](../_static/images/portal/workspace/analytics/sdk_to_node.png)
 
 
-#### Training model
+**Step 4:** Training model
 Here is an example of **Decision Tree**:
 import package:
 ```python =
@@ -298,20 +298,18 @@ print(json.dumps(ret))
 
 ![](../_static/images/portal/workspace/analytics/dt_5.png)
 
-#### Save and upload the Analytic API
+**Step 5:** Save and upload the Analytic API
 After we edit the Analytic App, we must save and upload it as follow steps:
 
-**Step 1:**
-Click the icon ![](../_static/images/portal/workspace/analytics/icon_01.png) is in upper left corner.
+(i) Click the icon ![](../_static/images/portal/workspace/analytics/icon_01.png) is in upper left corner.
 
-**Step 2:**
-Click `SAVE`, and we are uploading the Analytic App now.
+(ii) Click `SAVE`, and we are uploading the Analytic App now.
 
 ![](../_static/images/portal/workspace/analytics/dt_to_save.png)
 
 ![](../_static/images/portal/workspace/analytics/dt_save_inprogress.png)
 
-After a second, we can see that it's successful to upload.
+Wait a second, we can see that it's successful to upload.
 
 ![](../_static/images/portal/workspace/analytics/dt_save_running.png)
 
@@ -381,23 +379,20 @@ Now, we can see the Node-RED UI, and start to create the flow.
 
 ![](../_static/images/portal/workspace/solution/new_node_red.png)
 
-### Start training model
+#### Start training model
 In **Pre-condition** step, we create ota node and firehose node. Decision Tree example in the above, we create a Decision Tree node, sso_setting already exists. 
-
 Now, we have **sso_setting** node, **firehose_influxdb_query** node, **training_dt_model** node, and **ota** node.
-
 You need pull four nodes such that **sso_setting**, **firehose_influxdb_query**, **training_dt_model**, and **ota**.
 
-Here is a example like this:
-
+Here is an example as follows:
 ![](../_static/images/portal/workspace/solution/4node_innodered.png)
 
-**Setting the nodes**
+**Setup the nodes**
 1. The **sso_setting** node
 
 **Step 1:** Enter **SSO User** and **SSO Password**.
 
-**Step 2:** Click **DONE** to save your setting.
+**Step 2:** Click **DONE** to save the setting.
 
 ![](../_static/images/portal/workspace/solution/sso_node.png)
 
@@ -425,7 +420,7 @@ Here is a example like this:
 
 **Step 4:** Select **target** to training model.
 
-**Step 5:** If you complete the setup, please click **DONE** to save your setting.
+**Step 5:** Please click **DONE** to save your setting when you complete the setup.
 
 ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
 
@@ -434,7 +429,7 @@ Here is a example like this:
 
 **Step 1:** Choose **Device Name** and **Storage Name**.
 
-**Step 2:** If you complete the setup, please click **DONE** to save your setting.
+**Step 2:** Please click **DONE** to save the setting when you complete the setup.
 
 ![](../_static/images/portal/workspace/solution/ota_node.png)
 
@@ -447,6 +442,6 @@ Here is a example like this:
 **Step 3:** Click **SAVE** to save solution.
 ![](../_static/images/portal/workspace/solution/deploy_nodered.png)
 
-**Successful**
+We create the solution successfully when it shows **Update complete** in the bottom right.
 ![](../_static/images/portal/workspace/solution/save_successful.png)
 
