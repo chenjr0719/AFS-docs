@@ -45,9 +45,9 @@ In this example, **memory** and **disk_quota** are also assigned to 2048MB. If s
 
 > **Note:** The default value of **disk_quota** is **2048MB** to avoid insufficient disk space when installing modules. If you set **disk_quota** less than 2048MB, the value will be overridden to 2048MB.
 
-The **requirements** are the most important part in analytic develop. As native python develop, when you need some external modules, you can use **requirements.txt** to record all dependencies of your analytic. (more information can be found at [pip docs](https://pip.pypa.io/en/stable/user_guide/#id1)). Provide a list of **requirements** can obtain the same effect when developing analytic by **AFS**.
+The **requirements** are the most important part in analytic develop. As native python develop, when you need some external modules, you can use **requirements.txt** to record all dependencies of your analytic. (More information can be found at [pip docs](https://pip.pypa.io/en/stable/user_guide/#id1).) Provide a list of **requirements** can obtain the same effect when developing analytic by **AFS**.
 
-The **Type** is used to declare this analytic is an **APP** or an **API**. In default, all analytic will be assigned as **APP** type. But if you want your analytic serve as an **API**(and also write in any web framework), you need set **type** to **API** to host your analytic on **WISE-PaaS**.
+The **Type** is used to declare this analytic is an **APP** or an **API**. In default, all analytic will be assigned as **APP** type. But if you want your analytic serve as an **API** (and also write in any web framework), you need set **type** to **API** to host your analytic on **WISE-PaaS**.
 
 
 #### Create analytic with Online Code IDE
