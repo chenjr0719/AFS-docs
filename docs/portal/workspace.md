@@ -315,9 +315,9 @@ Wait a second, we can see that it's successful to upload.
 
 ----------------------------------------------------------
 ### Solution
-**Pre-condition**
+**Pre-condition:**
 Before creating a solution, there are preparations we msut get ready.
-In the beginning, subscribing ota node and firehose node form Catalog is required.
+In the beginning, subscribing ota node and influxdb_query node from Catalog is required.
 Now, we subscribe the ota node firstly.
 
 **Step 1:** Click **Catalog**. 
@@ -333,13 +333,13 @@ Next, we subscribe the firehose node.
 
 ![](../_static/images/portal/workspace/solution/subscribe_ota.png)
 
-**Step 5:** Click firehose's **DETAIL**.
+**Step 5:** Click influxdb_query's **DETAIL**.
 
 ![](../_static/images/portal/workspace/solution/click_firehose.png)
 
-**Step 6:** Click **SUBSCRIBE**, and we subscribe the firehose node successfully.
+**Step 6:** Click **SUBSCRIBE**, and we subscribe the influxdb_query node successfully.
 
-**Step 7:** Click **Workspace**, go back to workspace.
+**Step 7:** Click **Workspaces**, go back to workspace.
 
 ![](../_static/images/portal/workspace/solution/subscribe_firehose.png)
 
@@ -367,7 +367,7 @@ There are the steps as follows:
 
 ![](../_static/images/portal/workspace/solution/create_solution.png)
 
-**Step 4:** Enter the filename.
+**Step 4:** Enter the solution name.
 
 **Step 5:** Click **CREATE** to create the solution.
 
@@ -383,9 +383,11 @@ Now, we can see the Node-RED UI, and start to create the flow.
 ![](../_static/images/portal/workspace/solution/new_node_red.png)
 
 #### Start create the solution by Online Flow IDE
-In the **Pre-condition** step, we create ota node and firehose node. AS the example in **Example of Code IDE**, we create a Decision Tree node. The sso_setting already exists. 
-Now, we have **sso_setting** node, **firehose_influxdb_query** node, **training_dt_model** node, and **ota** node.
-You need pull four nodes such that **sso_setting**, **firehose_influxdb_query**, **training_dt_model**, and **ota**.
+In the **Pre-condition** step, we create ota node and influxdb_query node. As the example in **Example of Code IDE**, we create a Decision Tree node. The sso_setting already exists. 
+Now, we have **sso_setting** node, **influxdb_query** node, **training_dt_model** node, and **ota** node.
+* How to create **training_dt_model** node, please refer **Example of Online Code IDE** above
+
+You need pull four nodes such that **sso_setting**, **influxdb_query**, **training_dt_model**, and **ota**.
 
 Here is an example as follows:
 ![](../_static/images/portal/workspace/solution/4node_innodered.png)
@@ -416,11 +418,11 @@ Here is an example as follows:
 
     **Step 2:** Select **features** to training model.
 
-    **Step 3:** Select **numerical data**.
+    **Step 3:** Select **numerical features**.
 
     ![](../_static/images/portal/workspace/solution/dt_nodered_2.png)
 
-    **Step 4:** Select **target** to training model.
+    **Step 4:** Select **target features** to training model.
 
     **Step 5:** Please click **DONE** to save your setting when you complete the setup.
 
@@ -437,7 +439,7 @@ Here is an example as follows:
 
 5. **Nodes connecting**
 
-    **Step 1:** Connect nodes.
+    **Step 1:** Connect nodes, influxdb_query connection training_dt_model and training_dt_model connection ota that like the image below
 
     **Step 2:** Click **Deploy** to save **Node-RED**.
 
@@ -446,4 +448,6 @@ Here is an example as follows:
 
 We create the solution successfully when it shows **Update complete** in the bottom right.
 ![](../_static/images/portal/workspace/solution/save_successful.png)
+
+
 
