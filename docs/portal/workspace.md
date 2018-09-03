@@ -316,7 +316,7 @@ Wait a second, we can see that it's successful to upload.
 ----------------------------------------------------------
 ### Solution
 **Pre-condition:**
-Before creating a solution, there are preparations we msut get ready.
+Before creating a solution, there are preparations we must get ready.
 In the beginning, subscribing ota node and influxdb_query node from Catalog is required.
 Now, we subscribe the ota node firstly.
 
