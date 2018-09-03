@@ -1,4 +1,4 @@
 name,task_type,app_name,command,arguments,trigger_type,minutes,hours,cron,device,storage,model_repository,username,password,solution_instance_name
+training_rnn_cron,command,rnn_model-dev,run_jnb rnn_model-dev.ipynb -m false,,cron,,,* * * * *,,,,,,
+training_rnn_interval,command,rnn_model-dev,run_jnb rnn_model-dev.ipynb -m false,,interval,1,,,,,,,,
 training_dt_task,solution,,,,interval,1,,,,,,,,training_decisiontree
-training_rnn_cron,command,rnn-model-dev,run_jnb rnn-model.ipynb -m false,,cron,,,* * * * *,,,,,,
-training_rnn_interval,command,rnn-model-dev,run_jnb rnn-model.ipynb -m false,,interval,1,,,,,,,,
