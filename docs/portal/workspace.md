@@ -409,7 +409,6 @@ Here is an example as follows:
 
     ![](../_static/images/portal/workspace/solution/firehose_node.png)
 
-
 3. The **training_dt_model** node
 
     **Step 1:** Enter **parameters** to training model.
@@ -427,7 +426,6 @@ Here is an example as follows:
     **Step 5:** Please click **DONE** to save your setting when you complete the setup.
 
     ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
-
 
 4. The **ota** node
 
