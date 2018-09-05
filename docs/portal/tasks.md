@@ -10,7 +10,7 @@
 
 ![](../_static/images/portal/tasks/task.png)
 
-**Step 3:** Enter task name.
+**Step 3:** Enter task name training_model.
 
 **Step 4:** Click **NEXT**.
 
@@ -18,11 +18,11 @@
 
 #### Task types
 
-**Step 5:** Choose **Task Type**(click Solution).
+**Step 5:** Choose **Task Type**, then choose Solution.
 
 ![](../_static/images/portal/tasks/task_type.png)
 
-**Step 6:** Choose **Solution Instance**. (You can choose which you create solution, please refer [Solution](https://afs-docs.readthedocs.io/en/latest/portal/workspace.html) to create your solution)
+**Step 6:** Choose **Solution Instance**. (You can choose which you create solution, please refer [Solution](https://afs-docs.readthedocs.io/en/latest/portal/workspace.html) to create your solution.)
 
 **Step 7:** Click **NEXT**.
 
@@ -30,24 +30,23 @@
 
 #### Trigger types
 
-**Step 8:** Choose **trigger type** 
+**Step 8:** Choose **trigger type**. 
 
-In this example, we choose **interval**.
+In this example, we choose **Interval**.
 
 ![](../_static/images/portal/tasks/task_trigger_1.png)
 
-**Step 9:** Choose **interval type**
+**Step 9:** Choose **Interval type**.
 
-In this example,we choose **Minutes**.
+In this example, we choose **Minutes**.
 
-**Step 10:** Enter **interval**.
+**Step 10:** Enter **Interval**.
 
 In this example, we enter **1**.
 
 **Step 11:** Click **CREATE**.
 
 ![](../_static/images/portal/tasks/task_trigger_2.png)
-
 
 
 **Step 12:** Click training model.
@@ -58,11 +57,11 @@ When you click training model, and you can see like this.
 
 ![](../_static/images/portal/tasks/goto_task.png)
 
-When the task successed, you can see like this.
+When the task has been executed, you can see like this.
 
 ![](../_static/images/portal/tasks/task_run_successful.png)
 
-* If timeout occurs, please adjust the interval size because the training time is greater than interval ; **API** can only accept one request at a time, receiving multiple requests at a time will timeout.
+* If timeout occurs, please adjust the interval size because the training time is greater than interval; **API** can only accept one request at a time, receiving multiple requests at a time will timeout.
 
 ### Task detail
 
@@ -74,7 +73,7 @@ When the task successed, you can see like this.
 #### Resume task
 
 **Step 1:** Click **RESUME**. 
-You need click **PAUSE** first, and *RESUME** will appear.
+You need click **PAUSE** first, and **RESUME** will appear.
 
 ![](../_static/images/portal/tasks/task_resume.png)
 
@@ -98,7 +97,7 @@ You need click **PAUSE** first, and *RESUME** will appear.
 
 ![](../_static/images/portal/tasks/multitask_create_1.png)
 
-**Step 4:** Click **Creare multiple task**.
+**Step 4:** Click **Create multiple task**.
 
 ![](../_static/images/portal/tasks/multitask_create_2.png)
 
@@ -106,7 +105,7 @@ You need click **PAUSE** first, and *RESUME** will appear.
 
 **Step 6:** Choose csv file. (In the [example](https://github.com/chenjr0719/AFS-docs/blob/master/docs/_static/images/portal/tasks/multiple_task_example.csv), you must create APP first. Please refer [Analytics](https://afs-docs.readthedocs.io/en/latest/portal/workspace.html#analytics)).
 
-* In the example, the parameter of **cron** that refer the [link](http://www.adminschoice.com/crontab-quick-reference). 
+* In the example, the parameter of **Cron** that refer the [link](http://www.adminschoice.com/crontab-quick-reference). 
 
 **Step 7:** Click **CREATE**.
 
