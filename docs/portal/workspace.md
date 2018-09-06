@@ -91,7 +91,7 @@ This section will provide an example to use **Vendor** of AFS to install a modul
 
 Here is an example to create Analytic API by Online Code IDE.
 
-**Step 1:** Create a new Online Code IDE. 
+**Step 1:** Create a new Online Code IDE, please name it training_dt_model.
 About the detail, please refer to the **Create analytic with Online Code IDE** section.
 
 **Step 2:** Declare the manifest.
@@ -385,7 +385,7 @@ Now, we can see the Node-RED UI, and start to create the flow.
 #### Start create the solution by Online Flow IDE
 In the **Pre-condition** step, we create ota node and influxdb_query node. As the example in **Example of Code IDE**, we create a Decision Tree node. The sso_setting already exists. 
 Now, we have **sso_setting** node, **influxdb_query** node, **training_dt_model** node, and **ota** node.
-* How to create **training_dt_model** node, please refer **Example of Online Code IDE** above
+* How to create **training_dt_model** node, please refer **Example of Online Code IDE** above.
 
 You need pull four nodes such that **sso_setting**, **influxdb_query**, **training_dt_model**, and **ota**.
 
@@ -437,7 +437,7 @@ Here is an example as follows:
 
 5. **Nodes connecting**
 
-    **Step 1:** Connect nodes, influxdb_query connection training_dt_model and training_dt_model connection ota that like the image below
+    **Step 1:** Connect nodes, influxdb_query connection training_dt_model and training_dt_model connection ota that like the image below.
 
     **Step 2:** Click **Deploy** to save **Node-RED**.
 
