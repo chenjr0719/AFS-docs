@@ -1,7 +1,7 @@
-# Inference engine install Python Package
+# Inference Engine Install Python Package
 
 
-The Inference engine is a Python runtime program that runs on Docker on a foggy device, so it is sometimes necessary to update the relevant suites that Python needs.
+The **Inference Engine** is a Python runtime program that runs on Docker in a foggy device, so it is sometimes necessary to update the relevant suites that Python needs.
 
 ## Update the Python Package via the Internet
 

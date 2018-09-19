@@ -27,6 +27,7 @@ Welcome to AFS documentation!
    :caption: Inference Engine
 
    inference_engine/Install_packages
+   inference_engine/automatic_install
 
 
 Indices and tables
