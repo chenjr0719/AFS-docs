@@ -5,14 +5,12 @@ The Inference engine is a Python runtime program that runs on Docker a foggy dev
 
 ## Pre-condition
 
-
-   ![image](../_static/images/inference_engine/1. 打包套件列表.png)
     
 
 ## Update the Python Package via the whl file in a On-Premises environment
 
 
-   ![image](../_static/images/inference_engine/1. 打包套件列表.png)
+   ![image](../_static/images/inference_engine/01_package.png)
 
 
 1. Put the xgboost package whl file in the c:\inference_engine directory.
