@@ -7,7 +7,7 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 * The edge devices must be installed the **RMM Agent (v-1.0.16)**, and registed in RMM Server.
     
 
-## Let's Start to Install Inference Engine
+## Start to Install Inference Engine
 
 
 ![image](../_static/images/inference_engine/01_package.png)
