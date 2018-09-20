@@ -16,46 +16,47 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 
 ## Start to Install Inference Engine
 
+1. Use the OTApackager APP to package the required files.
+	a. The required files.
+	![image](../_static/images/inference_engine/01_package.png)
 
-![image](../_static/images/inference_engine/01_package.png)
+	b. Edit "install_docker.bat", the file path should be modified to matching the path in the edge device.
+	![image](../_static/images/inference_engine/02_step1.png)
 
-
-![image](../_static/images/inference_engine/02_step1.png)
-
-
-![image](../_static/images/inference_engine/03.png)
-
-
-![image](../_static/images/inference_engine/04_package_path.png)
+填入Package Tyep、Package Version，並選擇要打包的程式存放的資料夾
+    ![image](../_static/images/inference_engine/03.png)
 
 
-![image](../_static/images/inference_engine/05_login_RMM.png)
+    ![image](../_static/images/inference_engine/04_package_path.png)
 
 
-![image](../_static/images/inference_engine/06_ota_package.png)
+	![image](../_static/images/inference_engine/05_login_RMM.png)
 
 
-![image](../_static/images/inference_engine/07_upload.png)
+	![image](../_static/images/inference_engine/06_ota_package.png)
 
 
-![image](../_static/images/inference_engine/08_choose_file.png)
+	![image](../_static/images/inference_engine/07_upload.png)
 
 
-![image](../_static/images/inference_engine/09_upload_progress.png)
+	![image](../_static/images/inference_engine/08_choose_file.png)
 
 
-![image](../_static/images/inference_engine/10_ota_upgrade.png)
+	![image](../_static/images/inference_engine/09_upload_progress.png)
 
 
-![image](../_static/images/inference_engine/11_upgrade_package.png)
+	![image](../_static/images/inference_engine/10_ota_upgrade.png)
 
 
-![image](../_static/images/inference_engine/12_upgrade_progress.png)
+	![image](../_static/images/inference_engine/11_upgrade_package.png)
 
 
-![image](../_static/images/inference_engine/13_install01.png)
+	![image](../_static/images/inference_engine/12_upgrade_progress.png)
 
 
-![image](../_static/images/inference_engine/14_install02.png)
+	![image](../_static/images/inference_engine/13_install01.png)
+
+
+	![image](../_static/images/inference_engine/14_install02.png)
 
 
