@@ -7,7 +7,7 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 * The edge devices must be installed the **RMM Agent (v-1.0.16)**, and registed in RMM Server.
 * Get the application of packaging (OTAPackager-1.0.5.exe).
 * Download the files for package as follows: 
-   * Docker installer. [download](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+   * Docker installer. ([Download](https://store.docker.com/editions/community/docker-ce-desktop-windows))
 
    * Three .bat files (include install_docker.bat, start_docker.bat, start_inference.bat). [download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)
 
