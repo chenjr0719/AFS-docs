@@ -12,7 +12,7 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
    * Three .bat files (include install_docker.bat, start_docker.bat, start_inference.bat). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)]
 
    * SSL credential (registry.cert). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)]
-* Setup for login automatically after rebooting, please refer the [link](http://z88487561.pixnet.net/blog/post/47069245-%5Bwindows%5D-win-10-%E9%96%8B%E6%A9%9F-%E5%85%8D%E5%AF%86%E7%A2%BC-%E8%87%AA%E5%8B%95%E7%99%BB%E5%85%A5-%E5%B0%8F%E6%8A%80%E5%B7%A7).
+* Setup for login automatically after rebooting, please refer the [page](http://z88487561.pixnet.net/blog/post/47069245-%5Bwindows%5D-win-10-%E9%96%8B%E6%A9%9F-%E5%85%8D%E5%AF%86%E7%A2%BC-%E8%87%AA%E5%8B%95%E7%99%BB%E5%85%A5-%E5%B0%8F%E6%8A%80%E5%B7%A7).
 
 ## Start to Install Inference Engine
 
@@ -47,7 +47,7 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 	d. Select the package file for uploading.
 	![image](../_static/images/inference_engine/09_upload_progress.png)
 
-	e. Wait a second, when the progress goes to 100%, the uploaded file is shown in the list.
+	e. Wait a second, when the progress bar goes to 100%, the uploaded file is shown in the list.
 	![image](../_static/images/inference_engine/10_ota_upgrade.png)
 
 3. Send the uploaded file to the edge device for installing automatically.
@@ -63,9 +63,9 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 4. Before installing the package, the edge device restart once. The **Docker** in the edge device starts automatically, and the inference engine runs.
 
 	a. The screenshot shows when the installation is running.
-	![image](../_static/images/inference_engine/13_install01.png)
+	![image](../_statice/images/inference_engine/13_install01.png)
 
 	b. In the screenshot, it shows the required images are downloading.
 	![image](../_static/images/inference_engine/14_install02.png)
 
-
+Finally, an edge device has been installed the inference engine automatically. Here, if there are many edge devices need to install the inference engine, we just need pick mutiple devices in **Step 3.**, and they will be installed completely.

@@ -49,6 +49,48 @@ The **requirements** are the most important part in analytic develop. As native 
 
 The **Type** is used to declare this analytic is an **APP** or an **API**. In default, all analytic will be assigned as **APP** type. But if you want your analytic serve as an **API** (and also write in any web framework), you need set **type** to **API** to host your analytic on **WISE-PaaS**.
 
+When coding the analytic, and need to use the **AFS SDK** package, we could add the required package in the "requirements" of the manifest. There is an example for **Private Cloud** user as follows:
+
+Example for Private Cloud
+```python
+manifest = {
+    'memory': 256,
+    'disk_quota': 256,
+    'buildpack': 'python_buildpack',
+    'requirements': [
+        'numpy',
+        'pandas',
+        'scikit-learn',
+        'influxdb',
+        'requests',
+        'scipy',
+        'urllib3',
+        'afs'
+    ],
+    'type': 'API'
+}
+```
+Next, this one is for **Public Cloud**, we should give the link of AFS SDK.
+
+Example for Public Cloud
+```python
+manifest = {
+    'memory': 256,
+    'disk_quota': 256,
+    'buildpack': 'python_buildpack',
+    'requirements': [
+        'numpy',
+        'pandas',
+        'scikit-learn',
+        'influxdb',
+        'requests',
+        'scipy',
+        'urllib3',
+        'https://github.com/benchuang11046/afs/releases/download/1.2.18/afs-1.2.18-py3-none-any.whl'
+    ],
+    'type': 'API'
+}
+```
 
 #### Create analytic with Online Code IDE
 
