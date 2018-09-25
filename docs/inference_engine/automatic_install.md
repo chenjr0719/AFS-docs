@@ -68,4 +68,4 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 	b. In the screenshot, it shows the required images are downloading.
 	![image](../_static/images/inference_engine/14_install02.png)
 
-Finally, an edge device has been installed the inference engine automatically. Here, if there are many edge devices need to install the inference engine, we just need pick mutiple devices in **Step 3.**, and they will be installed completely.
+Finally, an edge device has been installed the inference engine automatically. Therefore, if there are many edge devices need to install the inference engine, we just need pick mutiple devices in **Step 3.**, and they will be installed completely.
