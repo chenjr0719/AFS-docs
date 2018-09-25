@@ -63,7 +63,7 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 4. Before installing the package, the edge device restart once. The **Docker** in the edge device starts automatically, and the inference engine runs.
 
 	a. The screenshot shows when the installation is running.
-	![image](../_statice/images/inference_engine/13_install01.png)
+	![image](../_static/images/inference_engine/13_install01.png)
 
 	b. In the screenshot, it shows the required images are downloading.
 	![image](../_static/images/inference_engine/14_install02.png)
