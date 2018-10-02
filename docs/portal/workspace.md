@@ -49,13 +49,13 @@ The **requirements** are the most important part in analytic develop. As native 
 
 The **Type** is used to declare this analytic is an **APP** or an **API**. In default, all analytic will be assigned as **APP** type. But if you want your analytic serve as an **API** (and also write in any web framework), you need set **type** to **API** to host your analytic on **WISE-PaaS**.
 
-When coding the analytic, and need to use the **AFS SDK** package, we could add the required package in the "requirements" of the manifest. There is an example for **Private Cloud** user as follows:
+When coding the analytics, and need to use the **AFS SDK** package, we can add the required package in the "requirements" of the manifest. There is an example for **Private Cloud** user as follows:
 
 Example for Private Cloud
 ```python
 manifest = {
     'memory': 256,
-    'disk_quota': 256,
+    'disk_quota': 2048,
     'buildpack': 'python_buildpack',
     'requirements': [
         'numpy',
@@ -70,13 +70,13 @@ manifest = {
     'type': 'API'
 }
 ```
-Next, this one is for **Public Cloud**, we should give the link of AFS SDK.
+For **Public Cloud**, we should give the link of AFS SDK.
 
 Example for Public Cloud
 ```python
 manifest = {
     'memory': 256,
-    'disk_quota': 256,
+    'disk_quota': 2048,
     'buildpack': 'python_buildpack',
     'requirements': [
         'numpy',
@@ -139,7 +139,7 @@ About the detail, please refer to the **Create analytic with Online Code IDE** s
 **Step 2:** Declare the manifest.
 Declaring the **manifest** at the first cell. About the detail, please refer to the **Manifest** section.
 
-```python =
+```python
 manifest = {
     'memory': 1024,
     'disk_quota': 2048,
@@ -163,7 +163,7 @@ manifest = {
 **Step 3:** Setting parameter of the analytic method. (We use the decision tree method for the example)
 In **Online Code IDE**, you can create a node on **Node-RED** by **SDK**, and you can provide the **Hyper-Parameter Tuning** for user. The following code must be at **second cell**.
 
-```python =
+```python 
 from afs import config_handler
 cfg = config_handler()
 cfg.set_param('criterion', type='string', required=True, default="gini")
