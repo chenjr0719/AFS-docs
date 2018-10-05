@@ -22,43 +22,44 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 	![image](../_static/images/inference_engine/01_package.png)
 
 	b. Edit "install_docker.bat", the file path should be modified to matching the path in the edge device.
-	![image](../_static/images/inference_engine/02_step1.png)
+	![image](../_static/images/inference_engine/02_1.png)
 
 	c. Enter the Package Tyep, Package Version, then select the path for saving the package file.
-    ![image](../_static/images/inference_engine/03.png)
+	![image](../_static/images/inference_engine/02_2_step1.png)
 
     d. Select **install_docker.bat** to be the "Deploy File".
-    ![image](../_static/images/inference_engine/04_package_path.png)
+    ![image](../_static/images/inference_engine/03.png)
 
     e. Select the folder for saving the package file.
-	![image](../_static/images/inference_engine/05_login_RMM.png)
+    ![image](../_static/images/inference_engine/04_package_path.png)
 
 2. Login to **RMM Portal**, and upload the package file.
 	
 	a. Login to **RMM Portal**.
-	![image](../_static/images/inference_engine/06_ota_package.png)
+	![image](../_static/images/inference_engine/05_login_RMM.png)
 
 	b. Click OTA Package.
-	![image](../_static/images/inference_engine/07_upload.png)
+	![image](../_static/images/inference_engine/06_ota_package.png)
 
 	c. Click "Upload".
-	![image](../_static/images/inference_engine/08_choose_file.png)
+	![image](../_static/images/inference_engine/07_upload.png)
 
 	d. Select the package file for uploading.
-	![image](../_static/images/inference_engine/09_upload_progress.png)
+	![image](../_static/images/inference_engine/08_choose_file.png)
 
 	e. Wait a second, when the progress bar goes to 100%, the uploaded file is shown in the list.
-	![image](../_static/images/inference_engine/10_ota_upgrade.png)
+	![image](../_static/images/inference_engine/09_upload_progress.png)
 
 3. Send the uploaded file to the edge device for installing automatically.
 	
 	a. Click "OTA" and "Upgrade". Then, select the device to be installed.
-	![image](../_static/images/inference_engine/11_upgrade_package.png)
+	![image](../_static/images/inference_engine/10_ota_upgrade.png)
 
 	b. Selcet the package which want to **Upgrade**.
-	![image](../_static/images/inference_engine/12_upgrade_progress.png)
+	![image](../_static/images/inference_engine/11_upgrade_package.png)
 
 	c. When the progressing bar goes to 100%, the edge device downloaded the package file completely, and start to install it.
+	![image](../_static/images/inference_engine/12_upgrade_progress.png)
 
 4. Before installing the package, the edge device restart once. The **Docker** in the edge device starts automatically, and the inference engine runs.
 

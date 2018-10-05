@@ -9,7 +9,7 @@ The **Vendor** provides modules support for private cloud version of AFS. This c
 3. Delete module in Vendor
 
 
-![Vendor](../_static/images/portal/Vendor/default.png)
+![image](../_static/images/portal/Vendor/default.png)
 
 
 ### Download required module from [PyPI](https://pypi.org/)
