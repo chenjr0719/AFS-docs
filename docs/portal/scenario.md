@@ -1,4 +1,4 @@
-# AFS SCENARIO 
+
 
 ## SCENARIO 1. AFS Workspaces - Analytics
 ### Pre-condition
@@ -158,8 +158,8 @@ in it.
 	* Select Target Feature: Select the target of training. Please select EVENT in the field.
 	* Map Column: The value of this field is the JSON Key value (can't be changed).
 	
-5. Pull the OTA node from the list in the left side, and setup the parameters. Pick the edge device and storage that were setuped in *Pre-condition*.
-	![](../_static/images/portal/scenario/2-.png)
+5. Pull the OTA node from the list in the left side, and setup the parameters. Select the edge device and storage that were setuped in *Pre-condition*.
+	![](../_static/images/portal/scenario/2-21.png)
 
 6. Connect the Influxdb_Firehose node to the training_dt_model node, then connect the training_dt_model node to the OTA node, click the `Deploy` button in the upper right corner, and click the `Save` button to save the Solution.
 	![](../_static/images/portal/scenario/2-22.png)
@@ -278,10 +278,10 @@ Finally, an edge device has been installed the inference engine automatically. T
 	![image](../_static/images/inference_engine/20.png)
 
 	h. Login to inference_engine, and see the prediction results.
-		  i. Execute $ cmd to open the command window
-		 ii. Execute $ docker exec -it inference bash
-		iii. To check if the model is normally dispatched into the inference engine, we can execute $ ls /root/inference_engine/inference_engine/ to see the model.pkl exists or not.
-		 iv. Execute $ cat /root/inference_engine/inference_engine/predict_result.txt to check if the predicted value continues to increase, if the representative is successful.
+		(1) Execute ```$ cmd``` to open the command window
+		(2) Execute ```$ docker exec -it inference bash```
+		(3) To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to see the model.pkl exists or not.
+		(4) Execute ```$ cat /root/inference_engine/inference_engine/predict_result.txt``` to check if the predicted value continues to increase, if the representative is successful.
 		![image](../_static/images/inference_engine/21.png)
 
 ## SCENARIO 4. AFS Vender
