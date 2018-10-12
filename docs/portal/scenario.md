@@ -3,6 +3,7 @@
 ## SCENARIO 1. AFS Workspaces - Analytics
 ### Pre-condition
 1. Use SSO Tenant/Developer to login Management Portal, and subscribe the Influxdb service instance. (Please refer [Management Portal User Manual](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#ManagementPortal-1).)
+
 	a. Subscribe the service and name influxdb_dt
 	![](../_static/images/portal/scenario/1-1.png)
 	![](../_static/images/portal/scenario/1-2.png)
@@ -18,6 +19,7 @@
 	![](../_static/images/portal/scenario/1-6.png)
 
 4. Create a new Analytic, Firehose, to upload the training data to database.
+	
 	a. Create a new Analytic, and it's named by rnn_firehose.
 		![](../_static/images/portal/scenario/1-7.png)
 		![](../_static/images/portal/scenario/1-8.png)
@@ -75,6 +77,7 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 
 ### Pre-condition
 1. Create the Decision Tree node in the Online Flow IDE
+	
 	a. Create a new Aanlytic, and it's named by training_dt_model. About the detail process, please refer the Pre-condition Step 4.b in the Scenario 1.
 
 	b. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/training_dt_model-dev.md) to training_dt_model, and the code must be divided by cell.
@@ -104,6 +107,7 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 	Note: After the processing, the Influxdb_Query node is generated in the Online Flow IDE.
 
 3. Subscribe the OTA node in the Online Flow IDE.
+	
 	a. In the **Catalog**, we can subscribe the **OTA** node in the Analytic category. Please refer the screeshots as follows:
 	![](../_static/images/portal/scenario/2-7.png)
 	![](../_static/images/portal/scenario/2-8.png)
@@ -147,16 +151,23 @@ in it.
 	![](../_static/images/portal/scenario/2-18.png)
 
 	* criterion: Can't be empty. enter *gini* or *entropy*, separated by commas, there must be no spaces between parameters and commas.
+	
 	* random_state、max_depth: Enter the integer only. If want to optimize the parameters, we can fill in multiple sets of parameters in the random_state and max_depth fields as shown above. The parameters must be separated by commas. There must be no blank between the parameters and the comma.
+	
 	* K-fold: Enter the times for cross validation, and it must be an interger and bigger than one.
+	
 	* model_name: Name the trained model, must like *.pkl (e.g., model.pkl).
 	![](../_static/images/portal/scenario/2-19.png)
 	![](../_static/images/portal/scenario/2-20.png)
 
 	* Select Features: Select which fields are to be put into the model for training (can be multiple select). In the field, please select the fields KW_EQUIPMENT, KW_FAN, KW_SUMMARY, PRESSURE_OUTPUT, STATUS_FAN, VOLTAGE_INPUT, and EVENT.
+	
 	* Select Numerical Features: Pick out the fields selected by select_features, which are the numeric fields (can be multiple selected but not fully selected, or not selected). Please select KW_EQUIPMENT, KW_FAN, KW_SUMMARY, PRESSURE_OUTPUT, STATUS_FAN, VOLTAGE_INPUT in the field.
+	
 	* Select Target Feature: Select the target of training. Please select EVENT in the field.
+	
 	* Map Column: The value of this field is the JSON Key value (can't be changed).
+
 	
 5. Pull the OTA node from the list in the left side, and setup the parameters. Select the edge device and storage that were setuped in *Pre-condition*.
 	![](../_static/images/portal/scenario/2-21.png)
@@ -165,6 +176,7 @@ in it.
 	![](../_static/images/portal/scenario/2-22.png)
 
 7. Create a new Solution Task.
+	
 	a. Click Tasks from the left menu, create a new Task named training_decisiontree_task, and press the Next button.
 	![](../_static/images/portal/scenario/2-23.png)
 	![](../_static/images/portal/scenario/2-24.png)
@@ -177,7 +189,7 @@ in it.
 	![](../_static/images/portal/scenario/2-27.png)
 	![](../_static/images/portal/scenario/2-28.png)
 
-8. Click training_decisiontree_task to enter **Task** to see the results.
+8. Click training_decisiontree_task to enter the **Task** to see the results.
 	![](../_static/images/portal/scenario/2-29.png)
 
 9. Wait a minute, the Task will start executing. After the execution is successful, the status will be displayed as succeded. If it does not appear after 1 minute, please press f5 to re-form the page.
@@ -187,17 +199,22 @@ in it.
 
 ## Pre-condition
 * The OS of edge devices must be the **Windows 10 Pro** or higher version.
+
 * The edge devices must be installed the **RMM Agent (v-1.0.16)**, and registed in RMM Server.
+
 * Get the application of packaging (OTAPackager-1.0.5.exe).
+
 * Download the files for package as follows: 
+   
    * Docker installer. [[Download](https://store.docker.com/editions/community/docker-ce-desktop-windows)]
 
    * Three .bat files (include install_docker.bat, start_docker.bat, start_inference.bat). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)]
 
    * SSL credential (registry.cert). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)]
+
 * Setup for login automatically after rebooting, please refer the [page](http://z88487561.pixnet.net/blog/post/47069245-%5Bwindows%5D-win-10-%E9%96%8B%E6%A9%9F-%E5%85%8D%E5%AF%86%E7%A2%BC-%E8%87%AA%E5%8B%95%E7%99%BB%E5%85%A5-%E5%B0%8F%E6%8A%80%E5%B7%A7).
 
-## Start to Install Inference Engine
+#### Start to Install Inference Engine
 
 1. Use the OTApackager APP to package the required files.
 	
@@ -265,8 +282,6 @@ Finally, an edge device has been installed the inference engine automatically. T
 	![image](../_static/images/inference_engine/16.png)
 	
 	d. Download the [firehose](https://github.com/minikai/to_inference_engine_firehose_demo_0904) for testing the inference engine.
-	d. Download the firehose program for testing the inference engine.
-	![image](../_static/images/inference_engine/17.png)
 
 	e. Click the Upload button at the top right to upload ex_config.ini, firehose.ipynb, and testing_data.csv to jupyter.
 	![image](../_static/images/inference_engine/18.png)
