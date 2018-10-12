@@ -1,7 +1,7 @@
 
 
 ## SCENARIO 1. AFS Workspaces - Analytics
-### Pre-condition
+#### Pre-condition
 1. Use SSO Tenant/Developer to login Management Portal, and subscribe the Influxdb service instance. (Please refer [Management Portal User Manual](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#ManagementPortal-1).)
 
 	a. Subscribe the service and name influxdb_dt
@@ -41,7 +41,7 @@
 	f. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
 	![](../_static/images/portal/scenario/1-14.png)
 
-### Regular operation
+#### Regular operation
 1. Create a new Analytic, and it's named by rnn_model.
 	![](../_static/images/portal/scenario/1-15.png)
 	![](../_static/images/portal/scenario/1-16.png)
@@ -75,7 +75,7 @@
 ## SCENARIO 2. AFS Workspaces - Solutions
 Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **Desicion Tree** model. After training the model, use the OTA to deliver the model to the edge device.
 
-### Pre-condition
+#### Pre-condition
 1. Create the Decision Tree node in the Online Flow IDE
 	
 	a. Create a new Aanlytic, and it's named by training_dt_model. About the detail process, please refer the Pre-condition Step 4.b in the Scenario 1.
@@ -134,7 +134,7 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 
 5. Setup the **RMM** device, include (1)install the **RMM Agent** in the edge device; (2)register the device; and (3)create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#RMM-4).
 
-### Regular operation
+#### Regular operation
 1. Create a new Analytic, and it's named by training_decisiontree.
 	![](../_static/images/portal/scenario/2-13.png)
 	![](../_static/images/portal/scenario/2-14.png)
@@ -197,7 +197,7 @@ in it.
 
 ## SCENARIO 3. Inference Engine
 
-## Pre-condition
+#### Pre-condition
 * The OS of edge devices must be the **Windows 10 Pro** or higher version.
 
 * The edge devices must be installed the **RMM Agent (v-1.0.16)**, and registed in RMM Server.
@@ -308,10 +308,10 @@ The development process can be done offline through Vendor.
 
 ## SCENARIO 5. AFS Task
 
-### Create a task
+#### Create a task
 The deatil steps are included in Scenario 2., please refer to Step 8-10 of Scenario 2.
 
-### Create multiple tasks
+#### Create multiple tasks
 1. Download “multiple_task_example.csv” to make the list of tasks.
 	a. Click the CREATE button in the upper right corner of the Task page, click the button in the upper right corner of the pop-up window and click Create multiple task.
 
