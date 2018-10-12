@@ -29,6 +29,11 @@ Welcome to AFS documentation!
    inference_engine/Install_packages
    inference_engine/automatic_install
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Quick Start
+
+   portal/scenario
 
 Indices and tables
 ==================
