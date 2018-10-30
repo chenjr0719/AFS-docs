@@ -1,5 +1,3 @@
-
-
 ## SCENARIO 1. AFS Workspaces - Analytics
 #### Pre-condition
 1. Use SSO Tenant/Developer to login Management Portal, and subscribe the Influxdb service instance. (Please refer [Management Portal User Manual](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#ManagementPortal-1).)
@@ -20,16 +18,16 @@
 
 4. Create a new Analytic, Firehose, to upload the training data to database.
 	
-	a. Create a new Analytic, and it's named by rnn_firehose.
+	a. Create a new Analytic, and it's named by "data_to_influxdb".
 		![](../_static/images/portal/scenario/1-7.png)
 		![](../_static/images/portal/scenario/1-8.png)
 		![](../_static/images/portal/scenario/1-9.png)
 
-	b. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/rnn_firehose-dev.md)to the rnn_firehose, and the code must be divided by cell.
+	b. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/data_to_influxdb-dev.md)to the data_to_influxdb, and the code must be divided by cell.
 	Note: The **Cell** is like as follows:
 	![](../_static/images/portal/scenario/1-10.png)
 	
-	c. Enter the connecting information to the rnn_firehose.
+	c. Enter the connecting information to the data_to_influxdb.
 	![](../_static/images/portal/scenario/1-11.png)
 	![](../_static/images/portal/scenario/1-12.png)
 

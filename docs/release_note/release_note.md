@@ -1,6 +1,16 @@
 # Release Note
 
 ## 1.2.26 (2018-10-26)
+Features:
+* Remove the **Hidden Space**.
+* Add the icon of WISE-PaaS into the AFS UI.
+* Add the default icon into APP status list.
+
+Bugfixed:
+在v1.2.25版本上测试，创建AFS实例失败，返回错误“Your account has been locked because of too many failed attempts to login”
+* Fix when it's failure to creating the AFS service intance  
+【偶发】场景2的training_decisiontree_task创建后，一直无执行结果
+無法設定具有逗號、減號、/n表示法的crontab類型的task
 
 
 ## 1.2.25 (2018-10-19)

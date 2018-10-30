@@ -35,6 +35,14 @@ Welcome to AFS documentation!
 
    portal/scenario
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Developer Guildlines
+   
+   developer_guildlines/startup_inference_dockerxx
+   developer_guildlines/troubleshooting
+   developer_guildlines/
+
 Indices and tables
 ==================
 
