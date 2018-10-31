@@ -6,7 +6,7 @@
 	![](../_static/images/portal/scenario/1-1.png)
 	![](../_static/images/portal/scenario/1-2.png)
 
-	b. Create the "Service Key", and get the connecting information of InfluxDB (e.g., database, host, password...).
+	b. Create the "Service Key", and get the connecting information of InfluxDB (database, host, password, etc.).
 	![](../_static/images/portal/scenario/1-3.png)
 	![](../_static/images/portal/scenario/1-4.png)
 	![](../_static/images/portal/scenario/1-5.png)
