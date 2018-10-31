@@ -1,5 +1,5 @@
 ## SCENARIO 1. AFS Workspaces - Analytics
-#### Pre-condition
+#### Pre-condition of Analytics
 1. Use SSO Tenant/Developer to login Management Portal, and subscribe the InfluxDB service instance. (Please refer [Management Portal User Manual](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#ManagementPortal-1).)
 
 	a. Subscribe the service and name influxdb_dt.
@@ -74,7 +74,7 @@
 ## SCENARIO 2. AFS Workspaces - Solutions
 Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **Desicion Tree** model. After training the model, use the OTA to deliver the model to the edge device.
 
-#### Pre-condition
+#### Pre-condition of Solutions
 1. Create the Decision Tree node in the Online Flow IDE.
 	
 	a. Create a new Aanlytic, and it's named by training_dt_model. About the detail process, please refer the Pre-condition Step 4.b in the Scenario 1.
@@ -98,7 +98,7 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 	![](../_static/images/portal/scenario/2-4.png)
 	![](../_static/images/portal/scenario/2-5.png)
 
-	b. The **influxdb_query analytic** is listed in the **Analytic List** when it's subscribed successfully.
+	b. The **influxdb_query** is shown in the **Analytics List** when it's subscribed successfully.
 
 	c. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
 	![](../_static/images/portal/scenario/2-6.png)
@@ -158,8 +158,7 @@ in it.
 	* model_name: Name the trained model, must .pkl type(e.g., model.pkl).
 	![](../_static/images/portal/scenario/2-19.png)
 	![](../_static/images/portal/scenario/2-20.png)
-	**Note:** Currently, it's supported the model is in .pkl and .h5 file types.
-
+	
 
 	* Select Features: Select which fields are to be put into the model for training (can be multiple select). In the field, please select the fields KW_EQUIPMENT, KW_FAN, KW_SUMMARY, PRESSURE_OUTPUT, STATUS_FAN, VOLTAGE_INPUT, and EVENT.
 	
