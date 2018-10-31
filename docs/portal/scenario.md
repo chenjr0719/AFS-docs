@@ -40,7 +40,7 @@
 	f. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
 	![](../_static/images/portal/scenario/1-14.png)
 
-#### Regular operation
+#### Create Analytic by Online Code IDE
 1. Create a new Analytic, and it's named by rnn_model.
 	![](../_static/images/portal/scenario/1-15.png)
 	![](../_static/images/portal/scenario/1-16.png)
@@ -75,7 +75,7 @@
 Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **Desicion Tree** model. After training the model, use the OTA to deliver the model to the edge device.
 
 #### Pre-condition
-1. Create the Decision Tree node in the Online Flow IDE
+1. Create the Decision Tree node in the Online Flow IDE.
 	
 	a. Create a new Aanlytic, and it's named by training_dt_model. About the detail process, please refer the Pre-condition Step 4.b in the Scenario 1.
 
@@ -92,18 +92,18 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 
 	Note: After the processing, the training_dt_model node is generated in the Online Flow IDE.
 
-2. Subscribe the Influxdb_Query node in the Online Flow IDE.
+2. Subscribe the influxdb_query node in the Online Flow IDE.
 
-	a. In the **Catalog**, we can subscribe the **Influxdb_Query** node in the Analytic category. Please refer the screeshots as follows:
+	a. In the **Catalog**, we can subscribe the **influxdb_query** node in the Analytic category. Please refer the screeshots as follows:
 	![](../_static/images/portal/scenario/2-4.png)
 	![](../_static/images/portal/scenario/2-5.png)
 
-	b. The **Influxdb_Query analytic** is listed in the **Analytic List** when it's subscribed successfully.
+	b. The **influxdb_query analytic** is listed in the **Analytic List** when it's subscribed successfully.
 
 	c. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
 	![](../_static/images/portal/scenario/2-6.png)
 
-	Note: After the processing, the Influxdb_Query node is generated in the Online Flow IDE.
+	Note: After the processing, the influxdb_query node is generated in the Online Flow IDE.
 
 3. Subscribe the OTA node in the Online Flow IDE.
 	
@@ -133,7 +133,7 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 
 5. Setup the **RMM** device, include (1)install the **RMM Agent** in the edge device; (2)register the device; and (3)create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#RMM-4).
 
-#### Regular operation
+#### Create Solution by Online Flow IDE
 1. Create a new Analytic, and it's named by training_decisiontree.
 	![](../_static/images/portal/scenario/2-13.png)
 	![](../_static/images/portal/scenario/2-14.png)
@@ -143,7 +143,7 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 2. Pull the SSO Setting node from the list in the left side. Then, enter the Username and Password
 in it.
 
-3. Pull the Influxdb_Query node from the list in the left side. Then, select the influxdb_dt and the service key that we have created. Therefore, enter `select * from machine` to the Query Command.
+3. Pull the influxdb_query node from the list in the left side. Then, select the influxdb_dt and the service key that we have created. Therefore, enter `select * from machine` to the Query Command.
 	![](../_static/images/portal/scenario/2-17.png)
 
 4. Pull the training_dt_model node from the list in the left side, and setup the parameters.
@@ -155,10 +155,11 @@ in it.
 	
 	* K-fold: Enter the times for cross validation, and it must be an interger and bigger than one.
 	
-	* model_name: Name the trained model, must like *.pkl (e.g., model.pkl).
+	* model_name: Name the trained model, must .pkl type(e.g., model.pkl).
 	![](../_static/images/portal/scenario/2-19.png)
 	![](../_static/images/portal/scenario/2-20.png)
-> **Note:**Currently, it's supported the model is in .pkl and .h5 file types.
+	**Note:** Currently, it's supported the model is in .pkl and .h5 file types.
+
 
 	* Select Features: Select which fields are to be put into the model for training (can be multiple select). In the field, please select the fields KW_EQUIPMENT, KW_FAN, KW_SUMMARY, PRESSURE_OUTPUT, STATUS_FAN, VOLTAGE_INPUT, and EVENT.
 	
