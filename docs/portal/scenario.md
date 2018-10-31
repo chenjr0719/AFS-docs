@@ -24,7 +24,8 @@
 		![](../_static/images/portal/scenario/1-9.png)
 
 	b. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/data_to_influxdb-dev.md) to the data_to_influxdb, and the code must be divided by cell.
->**Note:** The **Cell** is defined as follows:
+
+	**Note:** The **Cell** is defined as follows:
 	![](../_static/images/portal/scenario/1-10.png)
 	
 	c. Enter the connecting information to the data_to_influxdb.
