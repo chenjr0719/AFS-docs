@@ -6,7 +6,7 @@
 	![](../_static/images/portal/scenario/1-1.png)
 	![](../_static/images/portal/scenario/1-2.png)
 
-	b. Create the "Service Key", and get the connecting information of influxdb (e.g., database, host, password...).
+	b. Create the "Service Key", and get the connecting information of InfluxDB (e.g., database, host, password...).
 	![](../_static/images/portal/scenario/1-3.png)
 	![](../_static/images/portal/scenario/1-4.png)
 	![](../_static/images/portal/scenario/1-5.png)
@@ -52,7 +52,7 @@
 
 	![](../_static/images/portal/scenario/1-19.png)
 
-4. Enter the connecting information of influxdb.
+4. Enter the connecting information of InfluxDB.
 	![](../_static/images/portal/scenario/1-20.png)
 
 5. Execute all of cells.
