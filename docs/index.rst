@@ -39,9 +39,9 @@ Welcome to AFS documentation!
    :maxdepth: 3
    :caption: Developer Guildlines
    
-   developer_guildlines/startup_inference_dockerxx
-   developer_guildlines/troubleshooting
-   developer_guildlines/
+   developer_guildlines/startup_inference_docker###
+   developer_guildlines/troubleshooting###
+   developer_guildlines/private_registry###
 
 Indices and tables
 ==================

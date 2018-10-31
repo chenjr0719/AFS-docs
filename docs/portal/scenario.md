@@ -157,6 +157,7 @@ in it.
 	* model_name: Name the trained model, must like *.pkl (e.g., model.pkl).
 	![](../_static/images/portal/scenario/2-19.png)
 	![](../_static/images/portal/scenario/2-20.png)
+> **Note:**Currently, it's supported the model is in .pkl and .h5 file types.
 
 	* Select Features: Select which fields are to be put into the model for training (can be multiple select). In the field, please select the fields KW_EQUIPMENT, KW_FAN, KW_SUMMARY, PRESSURE_OUTPUT, STATUS_FAN, VOLTAGE_INPUT, and EVENT.
 	

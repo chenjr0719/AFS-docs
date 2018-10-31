@@ -95,6 +95,8 @@ Finally, an edge device has been installed the inference engine automatically. T
 
 	g. Open the firehose.ipynb just uploaded on jupyter and click `Run` to execute.
 	![image](../images/inference_engine/20.png)
+    
+> **Note:**The Inference Engine support the model which are .pkl and .h5 file types.
 
 	h. Login to inference_engine, and see the prediction results.
 		  i. Execute $ cmd to open the command window
