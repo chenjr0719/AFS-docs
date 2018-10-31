@@ -1,12 +1,12 @@
 ## SCENARIO 1. AFS Workspaces - Analytics
 #### Pre-condition
-1. Use SSO Tenant/Developer to login Management Portal, and subscribe the Influxdb service instance. (Please refer [Management Portal User Manual](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#ManagementPortal-1).)
+1. Use SSO Tenant/Developer to login Management Portal, and subscribe the InfluxDB service instance. (Please refer [Management Portal User Manual](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#ManagementPortal-1).)
 
-	a. Subscribe the service and name influxdb_dt
+	a. Subscribe the service and name influxdb_dt.
 	![](../_static/images/portal/scenario/1-1.png)
 	![](../_static/images/portal/scenario/1-2.png)
 
-	b. Create the "Service Key", and get the connecting information of influxdb (e.g., database, host, passsword...).
+	b. Create the "Service Key", and get the connecting information of influxdb (e.g., database, host, password...).
 	![](../_static/images/portal/scenario/1-3.png)
 	![](../_static/images/portal/scenario/1-4.png)
 	![](../_static/images/portal/scenario/1-5.png)
@@ -23,15 +23,15 @@
 		![](../_static/images/portal/scenario/1-8.png)
 		![](../_static/images/portal/scenario/1-9.png)
 
-	b. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/data_to_influxdb-dev.md)to the data_to_influxdb, and the code must be divided by cell.
-	Note: The **Cell** is like as follows:
+	b. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/data_to_influxdb-dev.md) to the data_to_influxdb, and the code must be divided by cell.
+>**Note:** The **Cell** is defined as follows:
 	![](../_static/images/portal/scenario/1-10.png)
 	
 	c. Enter the connecting information to the data_to_influxdb.
 	![](../_static/images/portal/scenario/1-11.png)
 	![](../_static/images/portal/scenario/1-12.png)
 
-	d. Execute each ecll.
+	d. Execute each cell.
 
 	e. Click the icon in the left side to save it, and click `SAVE` to upload the Analytic App.
 	![](../_static/images/portal/scenario/1-13.png)
@@ -47,7 +47,7 @@
 
 2. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/rnn_model-dev.md) to rnn-model which is created in last step.
 
-3. Install the scikit-learn package, please copy the command form the [link](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/install_package1), and paste the code in a new cell as the follows. After executing the cell, delete it.
+3. Install the scikit-learn package, please copy the command from the [link](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/install_package1), and paste the code in a new cell as the follows. After executing the cell, delete it.
 	![](../_static/images/portal/scenario/1-18.png)
 
 	![](../_static/images/portal/scenario/1-19.png)
@@ -63,7 +63,7 @@
 7. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
 	![](../_static/images/portal/scenario/1-22.png)
 
-8. Click **Models** in the manu, the model repository which is named by "rnn_model.h5" is created.
+8. Click **Models** in the menu, the model repository which is named by "rnn_model.h5" is created.
 	![](../_static/images/portal/scenario/1-23.png)
 
 9. Click "rnn_model.h5", we can see the accurancy and loss of the trained model.
@@ -191,7 +191,7 @@ in it.
 8. Click training_decisiontree_task to enter the **Task** to see the results.
 	![](../_static/images/portal/scenario/2-29.png)
 
-9. Wait a minute, the Task will start executing. After the execution is successful, the status will be displayed as succeded. If it does not appear after 1 minute, please press f5 to re-form the page.
+9. Wait a minute, the Task will start executing. After the execution is successful, the status will be displayed as succeded. If it does not appear after 1 minute, please press f5 to refresh the page.
 	![](../_static/images/portal/scenario/2-30.png)
 
 ## SCENARIO 3. Inference Engine
