@@ -101,7 +101,7 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 	b. The **influxdb_query** is shown in the **Analytics List** when it's subscribed successfully.
 
 	c. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
-	![](../_static/images/portal/scenario/2-6.png)
+	
 
 	Note: After the processing, the influxdb_query node is generated in the Online Flow IDE.
 
@@ -114,24 +114,10 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 	b. The **OTA analytic** is listed in the **Analytic List** when it's subscribed successfully.
 	
 	c. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
-	![](../_static/images/portal/scenario/2-9.png)
 	
 	Note: After the processing, the OTA node is generated in the Online Flow IDE.
 
-4. Create a new Analytic, Firehose, to upload the training data to database.
-	
-	a. Create a new Analytic, and it's named by data_to_influxdb, and copy the [sample code]( http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/data_to_influxdb-dev.md)
-	![](../_static/images/portal/scenario/2-10.png) to it.
-
-	b. Click `Run` to execute the cell, and it will print **success** when the cell is executed successfully.
-	
-	c. Click the icon in the left side to save it, and click `SAVE` to upload the Analytic App.
-	![](../_static/images/portal/scenario/2-11.png)
-
-	d. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
-	![](../_static/images/portal/scenario/2-12.png)
-
-5. Setup the **RMM** device, include (1)install the **RMM Agent** in the edge device; (2)register the device; and (3)create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#RMM-4).
+4. Setup the **RMM** device, include (1)install the **RMM Agent** in the edge device; (2)register the device; and (3)create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#RMM-4).
 
 #### Create Solution by Online Flow IDE
 1. Create a new Analytic, and it's named by training_decisiontree.
@@ -156,10 +142,9 @@ in it.
 	* K-fold: Enter the times for cross validation, and it must be an interger and bigger than one.
 	
 	* model_name: Name the trained model, must .pkl type(e.g., model.pkl).
-	![](../_static/images/portal/scenario/2-19.png)
-	![](../_static/images/portal/scenario/2-20.png)
+		![](../_static/images/portal/scenario/2-19.png)
+		![](../_static/images/portal/scenario/2-20.png)
 	
-
 	* Select Features: Select which fields are to be put into the model for training (can be multiple select). In the field, please select the fields KW_EQUIPMENT, KW_FAN, KW_SUMMARY, PRESSURE_OUTPUT, STATUS_FAN, VOLTAGE_INPUT, and EVENT.
 	
 	* Select Numerical Features: Pick out the fields selected by select_features, which are the numeric fields (can be multiple selected but not fully selected, or not selected). Please select KW_EQUIPMENT, KW_FAN, KW_SUMMARY, PRESSURE_OUTPUT, STATUS_FAN, VOLTAGE_INPUT in the field.
