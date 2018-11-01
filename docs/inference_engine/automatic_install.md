@@ -2,19 +2,45 @@
 
 Previously, an introduction of **Inference Engine**, it's a Python runtime program on Docker. We can install it manually step by step. However, for the industial application, there are many edge devices (e.g., perhaps 100, 1000, or more devices) work online at the same time. In the section, we introduce how to install the Inference Engine automatically in many edge devices.
 
-## Pre-condition
-* The OS of edge devices must be the **Windows 10 Pro** 64bit version.
-* The language of OS must be in **Simplified Chinese**,  **Traditional Chinese**, and **English**.
+#### Pre-condition
+* The OS of edge devices must be the **Windows 10 Pro** 64-bit version.
+
+* The language of OS must be in **Simplified Chinese**, **Traditional Chinese**, and **English**.
+
 * Turn on the Hyper-V in Windows 10. About the steps, please refer the [document](https://docs.microsoft.com/zh-tw/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+
 * The edge devices must be installed the **RMM Agent (v-1.0.16)**, and registed in RMM Server.
+
 * Get the application of packaging (OTAPackager-1.0.5.exe).
+
 * Download the files for package as follows: 
+   
    * Docker installer. [[Download](https://store.docker.com/editions/community/docker-ce-desktop-windows)]
 
    * Three .bat files (include install_docker.bat, start_docker.bat, start_inference.bat). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)]
 
    * SSL credential (registry.cert). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)]
-* Setup for login automatically after rebooting, please refer the [page](http://z88487561.pixnet.net/blog/post/47069245-%5Bwindows%5D-win-10-%E9%96%8B%E6%A9%9F-%E5%85%8D%E5%AF%86%E7%A2%BC-%E8%87%AA%E5%8B%95%E7%99%BB%E5%85%A5-%E5%B0%8F%E6%8A%80%E5%B7%A7).
+
+* Setup for login automatically after rebooting, please refer the [page](https://www.intowindows.com/how-to-automatically-login-in-windows-10/).
+
+* Close the firewall.
+	* Control Panel > System and Security > Windows Defender FireWall > Customize Settings.
+	* Turn off Windows Defender Firewall.
+	![image](../_static/images/inference_engine/close_firewall.png)
+
+* Close the notification.
+	* Control Panel > System and Security > Security and Maintenance > Change User Account Control settings.
+	* Set "Never notify".
+	![image](../_static/images/inference_engine/user_control.png)
+
+* The docker offical suggestion before installing [link](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install).
+	* Windows 10 64bit: Pro, Enterprise or Education (1607 Anniversary Update, Build 14393 or later).
+
+	* Virtualization is enabled in BIOS. Typically, virtualization is enabled by default. This is different from having Hyper-V enabled. For more detail see Virtualization must be enabled in Troubleshooting.
+	
+	* CPU SLAT-capable feature.
+
+	* At least 4GB of RAM.
 
 ## Start to Install Inference Engine
 

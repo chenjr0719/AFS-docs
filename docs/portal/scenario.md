@@ -139,6 +139,7 @@ in it.
 	* K_fold: Enter the times for cross validation, and it must be an interger and bigger than one.
 	
 	* model_name: Name the trained model, must .pkl type(e.g., model.pkl).
+		**Note:** The name of model must be "model.pkl", currently.
 		![](../_static/images/portal/scenario/2-19.png)
 		![](../_static/images/portal/scenario/2-20.png)
 	
@@ -180,7 +181,11 @@ in it.
 ## SCENARIO 3. Inference Engine
 
 #### Pre-condition
-* The OS of edge devices must be the **Windows 10 Pro** or higher version.
+* The OS of edge devices must be the **Windows 10 Pro** 64-bit version.
+
+* The language of OS must be in **Simplified Chinese**, **Traditional Chinese**, and **English**.
+
+* Turn on the Hyper-V in Windows 10. About the steps, please refer the [document](https://docs.microsoft.com/zh-tw/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 * The edge devices must be installed the **RMM Agent (v-1.0.16)**, and registed in RMM Server.
 
@@ -195,6 +200,26 @@ in it.
    * SSL credential (registry.cert). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)]
 
 * Setup for login automatically after rebooting, please refer the [page](https://www.intowindows.com/how-to-automatically-login-in-windows-10/).
+
+* Close the firewall.
+	* Control Panel > System and Security > Windows Defender FireWall > Customize Settings.
+	* Turn off Windows Defender Firewall.
+	![image](../_static/images/inference_engine/close_firewall.png)
+
+* Close the notification.
+	* Control Panel > System and Security > Security and Maintenance > Change User Account Control settings.
+	* Set "Never notify".
+	![image](../_static/images/inference_engine/user_control.png)
+
+* The docker offical suggestion before installing [link](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install).
+	* Windows 10 64bit: Pro, Enterprise or Education (1607 Anniversary Update, Build 14393 or later).
+
+	* Virtualization is enabled in BIOS. Typically, virtualization is enabled by default. This is different from having Hyper-V enabled. For more detail see Virtualization must be enabled in Troubleshooting.
+	
+	* CPU SLAT-capable feature.
+
+	* At least 4GB of RAM.
+
 
 #### Start to Install Inference Engine
 
@@ -269,7 +294,7 @@ Now, we can use the model which is trained in Scenario 2. to inference.
 	h. Login to inference_engine, and see the prediction results.	 	
 		1. Execute ```$ cmd``` to open the command window.    		
 		2. Execute ```$ docker exec -it inference bash```.    		
-		3. To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to check the model.pkl exists or not.   	
+		3. To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to check the model.pkl exists or not. (The model name must be "model.pkl".)  	
 		4. Execute ```$ cat /root/inference_engine/inference_engine/predict_result.txt``` to check if the predicted value continues to increase, if the representative is successful.		
 		![image](../_static/images/inference_engine/21.png)
 
