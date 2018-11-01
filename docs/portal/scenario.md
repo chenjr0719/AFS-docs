@@ -283,18 +283,16 @@ The development process can be done offline through Vendor.
 ## SCENARIO 5. AFS Task
 
 #### Create a task
-The deatil steps are included in Scenario 2., please refer to Step 8-10 of Scenario 2.
+The detail steps are included in Scenario 2., please refer to Step 8-10 of Scenario 2.
 
 #### Create multiple tasks
 1. Download “multiple_task_example.csv” to make the list of tasks.
 	
-	a. Click the CREATE button in the upper right corner of the Task page, click the button in the upper right corner of the pop-up window and click Create multiple task.
+	a. Click the CREATE button in the upper right corner of the Tasks page, click the button in the upper right corner of the pop-up window and click **Create multiple tasks**.
 
 	b. Click the link to download csv example.
 
 	c. Copy the [sample](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/multiple_task_example.csv) to a text editor and name the file multi_task.csv.
-
-	Note: About the detail to edit the csv file, please refer to section 4.3 of the [spec document](https://docs.google.com/document/d/1FtTis-vThtgimmgG0DyWrc3X3V4_2L6OJrya5P5ipiw/edit).
 
 2. Select the csv file (please select the csv file created by 1.c above) and click `CREATE` to create the tasks.
 
