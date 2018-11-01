@@ -61,15 +61,15 @@ If the file name looks like this, it means this wheel can be used for both **Pyt
 After download module file, you can upload it to AFS Vendor and let all analytic app to use this module in Online Code IDE.
 
 1. Click **UPLOAD** button, and select file which downloaded at first step.
-    ![upload_module](../_static/images/portal/vendor/upload_module.png)
+    ![upload_module](../_static/images/portal/vendor/upload.png)
 
 ### Delete module in Vendor
 
 You can also delete modules in Vendor with following steps:
 
 1. Click trash icon right behind the module name.
-    ![module_delete_button](../_static/images/portal/vendor/delete_module.png)
+    ![module_delete_button](../_static/images/portal/vendor/delete.png)
 
 2. Portal will ask to confirm delete, click **DELETE** button.
-    ![delete_module](../_static/images/portal/vendor/delete_confirm.png)
+    ![delete_module](../_static/images/portal/vendor/confirm_del.png)
 
