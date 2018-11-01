@@ -82,7 +82,7 @@ This section will provide an example to use **Vendor** of AFS to install a modul
 * Note: When using **Vendor** of AFS to install a module in **Online Code IDE**, we must add the module in the requirements of **manifest**, please refer the manifest section. 
 
 1. Right-click on the module and copy the url.
-    ![copy_module_url](../_static/images/portal/vendor/check_module.png)
+    ![copy_module_url](../_static/images/portal/vendor/vendor01.png)
 
 2. In **Online Code IDE**, use the following command and paste copied module url to install modules from the vendor:
     ```bash
@@ -297,7 +297,7 @@ After we edit the Analytic App, we must save and upload it as follow steps:
 
 (ii) Click `SAVE`, and we are uploading the Analytic App now.
 
-![](../_static/images/portal/workspace/analytics/dt_to_save.png)
+![](../_static/images/portal/workspace/analytics/dt_to_save01.png)
 
 Wait a second, we can see that it's successful to upload.
 
@@ -314,22 +314,21 @@ Now, we subscribe the ota node firstly.
 ![](../_static/images/portal/workspace/solution/2-7.png)
 
 **Step 3:** Click **SUBSCRIBE**, and we subscribe the ota node successfully.
+![](../_static/images/portal/workspace/solution/2-8.png)
 
 Next, we subscribe the firehose node.
 
 **Step 4:** Click **Catalog**.
-
-![](../_static/images/portal/workspace/solution/2-8.png)
 
 **Step 5:** Click influxdb_query's **DETAIL**.
 
 ![](../_static/images/portal/workspace/solution/2-4.png)
 
 **Step 6:** Click **SUBSCRIBE**, and we subscribe the influxdb_query node successfully.
+![](../_static/images/portal/workspace/solution/2-5.png)
 
 **Step 7:** Click **Workspaces**, go back to workspace.
 
-![](../_static/images/portal/workspace/solution/2-5.png)
 
 After subsribing the nodes, the system will rederect to the Analytics page. Wait a second, the Analytic APIs are created successfully.
 
