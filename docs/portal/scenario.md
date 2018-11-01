@@ -16,9 +16,9 @@
 3. Click **afs_training** to enter the AFS.
 	![](../_static/images/portal/scenario/1-6.png)
 
-4. Create a new Analytic, Firehose, to upload the training data to database.
+4. Create a new Analytics, Firehose, to upload the training data to database.
 	
-	a. Create a new Analytic, and it's named by "data_to_influxdb".
+	a. Create a new Analytics, and it's named by "data_to_influxdb".
 		![](../_static/images/portal/scenario/1-7.png)
 		![](../_static/images/portal/scenario/1-9.png)
 
@@ -33,14 +33,14 @@
 
 	d. Execute each cell.
 
-	e. Click the icon in the left side to save it, and click `SAVE` to upload the Analytic App.
+	e. Click the icon in the left side to save it, and click `SAVE` to upload the Analytics App.
 	![](../_static/images/portal/scenario/1-13.png)
 
 	f. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
 	![](../_static/images/portal/scenario/1-14.png)
 
-#### Create Analytic by Online Code IDE
-1. Create a new Analytic, and it's named by rnn_model.
+#### Create Analytics by Online Code IDE
+1. Create a new Analytics, and it's named by rnn_model.
 	![](../_static/images/portal/scenario/1-7.png)
 	![](../_static/images/portal/scenario/1-9.png)
 
@@ -56,10 +56,10 @@
 
 5. Execute all of cells.
 
-6. Click the icon in the left side to save it, and click `SAVE` to upload the Analytic App.
+6. Click the icon in the left side to save it, and click `SAVE` to upload the Analytics App.
 	![](../_static/images/portal/scenario/1-21.png)
 
-7. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
+7. Wait a minute, the status of the Analytics will change to **Running**, and go to next step.
 	![](../_static/images/portal/scenario/1-22.png)
 
 8. Click **Models** in the menu, the model repository which is named by "rnn_model.h5" is created.
@@ -82,49 +82,48 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 	c. Pick the second cell, and click `Run` to execute it.
 	![](../_static/images/portal/scenario/2-1.png)
 
-	d. Click the icon in the left side to save it, and click `SAVE` to upload the Analytic App.
+	d. Click the icon in the left side to save it, and click `SAVE` to upload the Analytics App.
 	![](../_static/images/portal/scenario/2-2.png)
 
-	e. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
+	e. Wait a minute, the status of the Analytics will change to **Running**, and go to next step.
 	![](../_static/images/portal/scenario/2-3.png)
 
-	Note: After the processing, the training_dt_model node is generated in the Online Flow IDE.
+	**Note:** After the processing, the training_dt_model node is generated in the Online Flow IDE.
 
 2. Subscribe the influxdb_query node in the Online Flow IDE.
 
-	a. In the **Catalog**, we can subscribe the **influxdb_query** node in the Analytic category. Please refer the screeshots as follows:
+	a. In the **Catalog**, we can subscribe the **influxdb_query** node in the Analytics category. Please refer the screeshots as follows:
 	![](../_static/images/portal/scenario/2-4.png)
 	![](../_static/images/portal/scenario/2-5.png)
 
 	b. The **influxdb_query** is shown in the **Analytics List** when it's subscribed successfully.
 
-	c. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
+	c. Wait a minute, the status of the Analytics will change to **Running**, and go to next step.
 	
-
-	Note: After the processing, the influxdb_query node is generated in the Online Flow IDE.
+	**Note:** After the processing, the influxdb_query node is generated in the Online Flow IDE.
 
 3. Subscribe the OTA node in the Online Flow IDE.
 	
-	a. In the **Catalog**, we can subscribe the **OTA** node in the Analytic category. Please refer the screeshots as follows:
+	a. In the **Catalog**, we can subscribe the **ota** node in the Analytics category. Please refer the screeshots as follows:
 	![](../_static/images/portal/scenario/2-7.png)
 	![](../_static/images/portal/scenario/2-8.png)
 
-	b. The **OTA analytic** is listed in the **Analytic List** when it's subscribed successfully.
+	b. The **OTA** is listed in the **Analytics** when it's subscribed successfully.
 	
-	c. Wait a minute, the status of the Analytic will change to **Running**, and go to next step.
+	c. Wait a minute, the status of the Analytics will change to **Running**, and go to next step.
 	
-	Note: After the processing, the OTA node is generated in the Online Flow IDE.
+	**Note:** After the processing, the OTA node is generated in the Online Flow IDE.
 
-4. Setup the **RMM** device, include (1)install the **RMM Agent** in the edge device; (2)register the device; and (3)create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#RMM-4).
+4. Setup the **RMM** device, include (1)install the **RMM Agent** in the edge device; (2)register the device; and (3)create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#EdgeSense-4).
 
 #### Create Solution by Online Flow IDE
-1. Create a new Analytic, and it's named by training_decisiontree.
+1. Create a new Analytics, and it's named by training_decisiontree.
 	![](../_static/images/portal/scenario/2-13.png)
 	![](../_static/images/portal/scenario/2-14.png)
 	![](../_static/images/portal/scenario/2-15.png)
 	![](../_static/images/portal/scenario/2-16.png)
 
-2. Pull the SSO Setting node from the list in the left side. Then, enter the Username and Password
+2. Pull the sso_setting node from the list in the left side. Then, enter the SSO Username and SSO Password
 in it.
 
 3. Pull the influxdb_query node from the list in the left side. Then, select the influxdb_dt and the service key that we have created. Therefore, enter `select * from machine` to the Query Command.
@@ -133,11 +132,11 @@ in it.
 4. Pull the training_dt_model node from the list in the left side, and setup the parameters.
 	![](../_static/images/portal/scenario/2-18.png)
 
-	* criterion: Can't be empty. enter *gini* or *entropy*, separated by commas, there must be no spaces between parameters and commas.
+	* criterion: Can't be empty. Please enter *gini* or *entropy*, separated by commas, there must be no spaces between parameters and commas.
 	
-	* random_state、max_depth: Enter the integer only. If want to optimize the parameters, we can fill in multiple sets of parameters in the random_state and max_depth fields as shown above. The parameters must be separated by commas. There must be no blank between the parameters and the comma.
+	* random_state and max_depth: Enter the integer only. If want to optimize the parameters, we can fill in multiple sets of parameters in the random_state and max_depth fields as shown above. The parameters must be separated by commas. There must be no blank between the parameters and the comma.
 	
-	* K-fold: Enter the times for cross validation, and it must be an interger and bigger than one.
+	* K_fold: Enter the times for cross validation, and it must be an interger and bigger than one.
 	
 	* model_name: Name the trained model, must .pkl type(e.g., model.pkl).
 		![](../_static/images/portal/scenario/2-19.png)
@@ -152,30 +151,30 @@ in it.
 	* Map Column: The value of this field is the JSON Key value (can't be changed).
 
 	
-5. Pull the OTA node from the list in the left side, and setup the parameters. Select the edge device and storage that were setuped in *Pre-condition*.
+5. Pull the ota node from the list in the left side, and setup the parameters. Select the edge device and storage that were setuped in *Pre-condition*.
 	![](../_static/images/portal/scenario/2-21.png)
 
-6. Connect the Influxdb_Firehose node to the training_dt_model node, then connect the training_dt_model node to the OTA node, click the `Deploy` button in the upper right corner, and click the `Save` button to save the Solution.
+6. Connect the Influxdb_Firehose node to the training_dt_model node, then connect the training_dt_model node to the OTA node, click the `Deploy` button in the upper right corner, and click the `SAVE` button to save the Solution.
 	![](../_static/images/portal/scenario/2-22.png)
 
 7. Create a new Solution Task.
 	
-	a. Click Tasks from the left menu, create a new Task named training_decisiontree_task, and press the Next button.
+	a. Click Tasks from the left menu, create a new task named training_decisiontree_task, and click the NEXT button.
 	![](../_static/images/portal/scenario/2-23.png)
 	![](../_static/images/portal/scenario/2-24.png)
 
-	b. Select the Solution Type, Solution Instance select training_decisiontree, and click `Next`.
+	b. Select the Solution Type, Solution Instance select training_decisiontree, and click NEXT.
 	![](../_static/images/portal/scenario/2-25.png)
 	![](../_static/images/portal/scenario/2-26.png)
 
-	c. About the Trigger Type, select Interval, and the Interval Type selects Minutes, the Interval fills in "1". Then, click `Create`.
+	c. About the Trigger Type, select Interval, and selects Minutes in the Interval Type. The Interval fills in "1". Then, click CREATE.
 	![](../_static/images/portal/scenario/2-27.png)
 	![](../_static/images/portal/scenario/2-28.png)
 
-8. Click training_decisiontree_task to enter the **Task** to see the results.
+8. Click training_decisiontree_task to enter the task to see the results.
 	![](../_static/images/portal/scenario/2-29.png)
 
-9. Wait a minute, the Task will start executing. After the execution is successful, the status will be displayed as succeded. If it does not appear after 1 minute, please press f5 to refresh the page.
+9. Wait a minute, the task will start executing. After the execution is successful, the status will be displayed as succeeded. If it does not appear after 1 minute, please press f5 to refresh the page.
 	![](../_static/images/portal/scenario/2-30.png)
 
 ## SCENARIO 3. Inference Engine
@@ -195,7 +194,7 @@ in it.
 
    * SSL credential (registry.cert). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/tree/master/inference_engine/auto_install_docker)]
 
-* Setup for login automatically after rebooting, please refer the [page](http://z88487561.pixnet.net/blog/post/47069245-%5Bwindows%5D-win-10-%E9%96%8B%E6%A9%9F-%E5%85%8D%E5%AF%86%E7%A2%BC-%E8%87%AA%E5%8B%95%E7%99%BB%E5%85%A5-%E5%B0%8F%E6%8A%80%E5%B7%A7).
+* Setup for login automatically after rebooting, please refer the [page](https://www.intowindows.com/how-to-automatically-login-in-windows-10/).
 
 #### Start to Install Inference Engine
 
@@ -221,7 +220,7 @@ in it.
 	a. Login to **RMM Portal**.
 	![image](../_static/images/inference_engine/05_login_RMM.png)
 
-	b. Click OTA, and click **Package**.
+	b. Click OTA > Package.
 	![image](../_static/images/inference_engine/06_ota_package.png)
 
 	c. Click **Upload**.
@@ -235,7 +234,7 @@ in it.
 
 3. Send the uploaded file to the edge device for installing automatically.
 	
-	a. Click "OTA" and "Upgrade". Then, select the device to be installed.
+	a. Click OTA > Upgrade. Then, select the device to be installed.
 	![image](../_static/images/inference_engine/10_ota_upgrade.png)
 
 	b. Selcet the package which want to **Upgrade**.
@@ -252,11 +251,11 @@ in it.
 	b. In the screenshot, it shows the required images are downloading.
 	![image](../_static/images/inference_engine/14_install02.png)
 
-Finally, an edge device has been installed the inference engine automatically. Therefore, if there are many edge devices need to install the inference engine, we just need pick mutiple devices in **Step 3.**, and they will be installed completely.
+Finally, an edge device has been installed the inference engine automatically. Therefore, if there are many edge devices need to install the inference engine, we just need pick multiple devices in **Step 3.**, and they will be installed completely.
 
-5. Now, we can use the model which is trained in Scenario 2. to inference.
+Now, we can use the model which is trained in Scenario 2. to inference.
 	
-	a. Confirm that the model is trained successfully in Scenario 2., and devivered to edge device by OTA.
+	a. Confirm that the model is trained successfully in Scenario 2., and can be delivered to edge device by OTA.
 
 	b. Download the anaconda (with python 3.6), and install it in the edge device. [[Download](https://www.anaconda.com/download/)]
 	![image](../_static/images/inference_engine/15.png)
