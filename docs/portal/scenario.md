@@ -254,37 +254,24 @@ in it.
 Finally, an edge device has been installed the inference engine automatically. Therefore, if there are many edge devices need to install the inference engine, we just need pick multiple devices in **Step 3.**, and they will be installed completely.
 
 Now, we can use the model which is trained in Scenario 2. to inference.
-	
 	a. Confirm that the model is trained successfully in Scenario 2., and can be delivered to edge device by OTA.
-
 	b. Download the anaconda (with python 3.6), and install it in the edge device. [[Download](https://www.anaconda.com/download/)]
-	![image](../_static/images/inference_engine/15.png)
-	
+	![image](../_static/images/inference_engine/15.png)	
 	c. Start the **Jupyter Notebook** from application.
 	![image](../_static/images/inference_engine/16.png)
-	
 	d. Download the [firehose](https://github.com/minikai/to_inference_engine_firehose_demo_0904) for testing the inference engine.
-
 	e. Click the Upload button at the top right to upload ex_config.ini, firehose.ipynb, and testing_data.csv to jupyter.
 	![image](../_static/images/inference_engine/18.png)
-
 	f. Click and modify ex_config.ini, and add "http://127.0.0.1:7500/predict" after "url=". Then, save the file.
 	![image](../_static/images/inference_engine/19.png)
-
 	g. Open the firehose.ipynb just uploaded on jupyter and click `Run` to execute.
 	![image](../_static/images/inference_engine/20.png)
-
-	h. Login to inference_engine, and see the prediction results.
-		
+	h. Login to inference_engine, and see the prediction results.		
 		1. Execute `cmd` to open the command window.
-			```$ cmd```
-		
-		2. Execute ```$ docker exec -it inference bash```.
-		
-		3. To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to check the model.pkl exists or not.
-		
-		4. Execute ```$ cat /root/inference_engine/inference_engine/predict_result.txt``` to check if the predicted value continues to increase, if the representative is successful.
-		
+			```$ cmd```		
+		2. Execute ```$ docker exec -it inference bash```.		
+		3. To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to check the model.pkl exists or not.		
+		4. Execute ```$ cat /root/inference_engine/inference_engine/predict_result.txt``` to check if the predicted value continues to increase, if the representative is successful.		
 		![image](../_static/images/inference_engine/21.png)
 
 ## SCENARIO 4. AFS Vender
