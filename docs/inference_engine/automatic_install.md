@@ -73,32 +73,23 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 
 Finally, an edge device has been installed the inference engine automatically. Therefore, if there are many edge devices need to install the inference engine, we just need pick mutiple devices in **Step 3.**, and they will be installed completely.
 
-5. Now, we can use the model which is trained in Scenario 2. to inference.
-	
-	a. Confirm that the model is trained successfully in Scenario 2., and devivered to edge device by OTA.
-
-	b. Download the anaconda (with python 3.6), and install it in the edge device. [[Download](https://www.anaconda.com/download/)]
-	![image](../images/inference_engine/15.png)
-	
-	c. Start the **Jupyter Notebook** from application.
-	![image](../images/inference_engine/16.png)
-	
-	d. Download the [firehose](https://github.com/minikai/to_inference_engine_firehose_demo_0904) for testing the inference engine.
-	d. Download the firehose program for testing the inference engine.
-	![image](../images/inference_engine/17.png)
-
-	e. Click the Upload button at the top right to upload ex_config.ini, firehose.ipynb, and testing_data.csv to jupyter.
-	![image](../images/inference_engine/18.png)
-
-	f. Click and modify ex_config.ini, and add "http://127.0.0.1:7500/predict" after "url=". Then, save the file.
-	![image](../images/inference_engine/19.png)
-
-	g. Open the firehose.ipynb just uploaded on jupyter and click `Run` to execute.
-	![image](../images/inference_engine/20.png)
-
-	h. Login to inference_engine, and see the prediction results.
+Now, we can use the model which is trained in Scenario 2. to inference.
+a. Confirm that the model is trained successfully in Scenario 2., and devivered to edge device by OTA.
+b. Download the anaconda (with python 3.6), and install it in the edge device. [[Download](https://www.anaconda.com/download/)]
+	![image](../_static/images/inference_engine/15.png)
+c. Start the **Jupyter Notebook** from application.
+	![image](../_static/images/inference_engine/16.png)
+d. Download the [firehose](https://github.com/minikai/to_inference_engine_firehose_demo_0904) for testing the inference engine.
+	![image](../_static/images/inference_engine/17.png)
+e. Click the Upload button at the top right to upload ex_config.ini, firehose.ipynb, and testing_data.csv to jupyter.
+	![image](../_static/images/inference_engine/18.png)
+f. Click and modify ex_config.ini, and add "http://127.0.0.1:7500/predict" after "url=". Then, save the file.
+	![image](../_static/images/inference_engine/19.png)
+g. Open the firehose.ipynb just uploaded on jupyter and click `Run` to execute.
+	![image](../_static/images/inference_engine/20.png)
+h. Login to inference_engine, and see the prediction results.
 		  i. Execute $ cmd to open the command window
 		 ii. Execute $ docker exec -it inference bash
 		iii. In order to check the model is delivered into the inference engine, we can execute $ ls /root/inference_engine/inference_engine/ to see the model.pkl exists or not. (About the model name, it's must named by "model.pkl".)
 		 iv. Execute $ cat /root/inference_engine/inference_engine/predict_result.txt to check if the predicted value continues to increase, if the representative is successful.
-		![image](../images/inference_engine/21.png)
+		![image](../_static/images/inference_engine/21.png)
