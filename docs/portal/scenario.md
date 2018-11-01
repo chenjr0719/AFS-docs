@@ -20,7 +20,6 @@
 	
 	a. Create a new Analytic, and it's named by "data_to_influxdb".
 		![](../_static/images/portal/scenario/1-7.png)
-		![](../_static/images/portal/scenario/1-8.png)
 		![](../_static/images/portal/scenario/1-9.png)
 
 	b. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/data_to_influxdb-dev.md) to the data_to_influxdb, and the code must be divided by cell.
@@ -42,9 +41,8 @@
 
 #### Create Analytic by Online Code IDE
 1. Create a new Analytic, and it's named by rnn_model.
-	![](../_static/images/portal/scenario/1-15.png)
-	![](../_static/images/portal/scenario/1-16.png)
-	![](../_static/images/portal/scenario/1-17.png)
+	![](../_static/images/portal/scenario/1-7.png)
+	![](../_static/images/portal/scenario/1-9.png)
 
 2. Copy the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/rnn_model-dev.md) to rnn-model which is created in last step.
 
@@ -279,13 +277,15 @@ Finally, an edge device has been installed the inference engine automatically. T
 
 	h. Login to inference_engine, and see the prediction results.
 		
-		1. Execute ```$ cmd``` to open the command window
+		1. Execute `cmd` to open the command window.
+			```$ cmd```
 		
-		2. Execute ```$ docker exec -it inference bash```
+		2. Execute ```$ docker exec -it inference bash```.
 		
-		3. To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to see the model.pkl exists or not.
+		3. To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to check the model.pkl exists or not.
 		
 		4. Execute ```$ cat /root/inference_engine/inference_engine/predict_result.txt``` to check if the predicted value continues to increase, if the representative is successful.
+		
 		![image](../_static/images/inference_engine/21.png)
 
 ## SCENARIO 4. AFS Vender
