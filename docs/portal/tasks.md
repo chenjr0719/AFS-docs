@@ -91,6 +91,8 @@ The users can operate the tasks by the requirement. There are three operations w
 
 ![](../_static/images/portal/tasks/multitask_create_3.png)
 
+### Limitation
+There are currently 5 threads executing tasks on the Kernel Gate Way. When it takes 3 minutes to train the model once, but it is set to execute the task every 1 minute, there will be an error condition in the task. Users must evaluate the schedule execution time for the task.
 
 
 
