@@ -267,10 +267,9 @@ Now, we can use the model which is trained in Scenario 2. to inference.
 	g. Open the firehose.ipynb just uploaded on jupyter and click `Run` to execute.
 	![image](../_static/images/inference_engine/20.png)
 	h. Login to inference_engine, and see the prediction results.		
-		1. Execute `cmd` to open the command window.
-			```$ cmd```		
-		2. Execute ```$ docker exec -it inference bash```.		
-		3. To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to check the model.pkl exists or not.		
+		1. Execute ```$ cmd``` to open the command window.   		
+		2. Execute ```$ docker exec -it inference bash```.   		
+		3. To check if the model is normally dispatched into the inference engine, we can execute ```$ ls /root/inference_engine/inference_engine/``` to check the model.pkl exists or not.   	
 		4. Execute ```$ cat /root/inference_engine/inference_engine/predict_result.txt``` to check if the predicted value continues to increase, if the representative is successful.		
 		![image](../_static/images/inference_engine/21.png)
 
