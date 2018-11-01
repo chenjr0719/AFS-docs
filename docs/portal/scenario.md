@@ -207,7 +207,7 @@ in it.
 	b. Edit "install_docker.bat", the file path should be modified to matching the path in the edge device.
 	![image](../_static/images/inference_engine/02_1.png)
 
-	c. Enter the Package Tyep, Package Version, then select the path for saving the package file.
+	c. Enter the Package Type, Package Version, then select the path for saving the package file.
 	![image](../_static/images/inference_engine/02_2_step1.png)
 
     d. Select **install_docker.bat** to be the "Deploy File".
@@ -221,10 +221,10 @@ in it.
 	a. Login to **RMM Portal**.
 	![image](../_static/images/inference_engine/05_login_RMM.png)
 
-	b. Click OTA Package.
+	b. Click OTA, and click **Package**.
 	![image](../_static/images/inference_engine/06_ota_package.png)
 
-	c. Click "Upload".
+	c. Click **Upload**.
 	![image](../_static/images/inference_engine/07_upload.png)
 
 	d. Select the package file for uploading.
@@ -291,7 +291,7 @@ Finally, an edge device has been installed the inference engine automatically. T
 ## SCENARIO 4. AFS Vender
 The development process can be done offline through Vendor.
 
-1. The module can be installed offline through Vendor. About more deatil, please refer to [documents](https://afs-docs.readthedocs.io/en/latest/portal/workspace.html#install-module-with-vendor-in-private-cloud).
+1. The module can be installed offline through Vendor. About more details, please refer to [documents](https://afs-docs.readthedocs.io/en/latest/portal/workspace.html#install-module-with-vendor-in-private-cloud).
 
 2. About how to manage the Vendor, including module upload, download, and delete the package, please refer to [documents](https://afs-docs.readthedocs.io/en/latest/portal/vendor.html).
 

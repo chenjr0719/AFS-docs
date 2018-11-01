@@ -2,14 +2,14 @@
 
 The **Vendor** provides modules support for private cloud version of AFS. This chapter will illustrate how to:
 
-1. Download required module from [PyPI](https://pypi.org/)
+1. Download required module from [PyPI](https://pypi.org/).
 
-2. Upload module to Vendor
+2. Upload module to Vendor.
 
-3. Delete module in Vendor
+3. Delete module in Vendor.
 
 
-![image](../_static/images/portal/vendor/default.png)
+![image](../_static/images/portal/vendor/vendor01.png)
 
 
 ### Download required module from [PyPI](https://pypi.org/)
@@ -60,15 +60,8 @@ If the file name looks like this, it means this wheel can be used for both **Pyt
 
 After download module file, you can upload it to AFS Vendor and let all analytic app to use this module in Online Code IDE.
 
-1. Press **UPLOAD** button
+1. Click **UPLOAD** button, and select file which downloaded at first step.
     ![upload_module](../_static/images/portal/vendor/upload_module.png)
-
-2. Select file which downloaded at first step.
-    ![upload_module](../_static/images/portal/vendor/select_file.png)
-
-3. Check the module.
-    ![check_module](../_static/images/portal/vendor/check_module.png)
-
 
 ### Delete module in Vendor
 

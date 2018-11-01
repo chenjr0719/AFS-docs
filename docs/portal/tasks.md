@@ -1,6 +1,5 @@
 ## Tasks
-
-![](../_static/images/portal/tasks/default.png)
+ 	
 
 ### Create new task
 
@@ -8,25 +7,25 @@
 
 **Step 2:** Click **CREATE**.
 
-![](../_static/images/portal/tasks/task.png)
+![](../_static/images/portal/tasks/2-23.png)
 
 **Step 3:** Enter task name training_model.
 
 **Step 4:** Click **NEXT**.
 
-![](../_static/images/portal/tasks/task_name.png)
+![](../_static/images/portal/tasks/2-24.png)
 
 #### Task types
 
 **Step 5:** Choose **Task Type**, then choose Solution.
 
-![](../_static/images/portal/tasks/task_type.png)
+![](../_static/images/portal/tasks/2-25.png)
 
 **Step 6:** Choose **Solution Instance**. (You can choose which you create solution, please refer [Solution](https://afs-docs.readthedocs.io/en/latest/portal/workspace.html) to create your solution.)
 
 **Step 7:** Click **NEXT**.
 
-![](../_static/images/portal/tasks/task_solution.png)
+![](../_static/images/portal/tasks/2-26.png)
 
 #### Trigger types
 
@@ -34,7 +33,7 @@
 
 In this example, we choose **Interval**.
 
-![](../_static/images/portal/tasks/task_trigger_1.png)
+![](../_static/images/portal/tasks/2-27.png)
 
 **Step 9:** Choose **Interval type**.
 
@@ -46,43 +45,24 @@ In this example, we enter **1**.
 
 **Step 11:** Click **CREATE**.
 
-![](../_static/images/portal/tasks/task_trigger_2.png)
+![](../_static/images/portal/tasks/2-28.png)
 
 
 **Step 12:** Click training model.
 
-![](../_static/images/portal/tasks/task_create_success.png)
-
-When you click training model, and you can see like this.
-
-![](../_static/images/portal/tasks/goto_task.png)
+![](../_static/images/portal/tasks/2-29.png)
 
 When the task has been executed, you can see like this.
 
-![](../_static/images/portal/tasks/task_run_successful.png)
+![](../_static/images/portal/tasks/2-30.png)
 
 * If timeout occurs, please adjust the interval size because the training time is greater than interval; **API** can only accept one request at a time, receiving multiple requests at a time will timeout.
 
-### Task detail
+### More Task's Operations
 
-#### Pause task
-**Step 1:** Click **PAUSE**.
+The users can operate the tasks by the requirement. There are three operations which are provided, include `PAUSE`, `RESUME`, and `DELETE`.
 
-![](../_static/images/portal/tasks/task_pause.png)
-
-#### Resume task
-
-**Step 1:** Click **RESUME**. 
-You need click **PAUSE** first, and **RESUME** will appear.
-
-![](../_static/images/portal/tasks/task_resume.png)
-
-
-### Delete task
-
-**Step 1:** Click **DELETE**.
-
-![](../_static/images/portal/tasks/task_delete.png)
+![](../_static/images/portal/tasks/task_operation.png)
 
 
 ### Create multiple tasks
@@ -91,7 +71,7 @@ You need click **PAUSE** first, and **RESUME** will appear.
 
 **Step 2:** Click **CREATE**.
 
-![](../_static/images/portal/tasks/task.png)
+![](../_static/images/portal/tasks/2-23.png)
 
 **Step 3:** Click icon as follows.
 
@@ -107,14 +87,9 @@ You need click **PAUSE** first, and **RESUME** will appear.
 
 * In the example, the parameter of **Cron** that refer the [link](http://www.adminschoice.com/crontab-quick-reference). 
 
-**Step 7:** Click **CREATE**.
+**Step 7:** Click **CREATE**, and the tasks are created successfully.
 
 ![](../_static/images/portal/tasks/multitask_create_3.png)
-
-Finally, the tasks are created successfully.
-
-![](../_static/images/portal/tasks/multitask_successful.png)
-
 
 
 

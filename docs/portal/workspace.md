@@ -1,6 +1,6 @@
 ## Workspace
 
-![workspace](../_static/images/portal/workspace/default.png)
+![workspace](../_static/images/portal/workspace/w01.png)
 
 ### Analytics
 
@@ -21,36 +21,14 @@ auth_code = os.getenv('auth_code')
 print(auth_code)
 ```
 The output:
-![](../_static/images/portal/workspace/auth_code.png)
+![](../_static/images/portal/workspace/w02.png)
 
 
 #### Manifest
 
-In **Online Code IDE**, you can define some customize configurations like **memory**, **disk**, or **requirements** for your analytic by declaring a **manifest** at the first cell.
+In **Online Code IDE**, you can define some customize configurations like **memory**, **disk**, or **requirements** for your analytic by declaring a **manifest** at the first cell. When coding the analytics, and need to use the **AFS SDK** package, we can add the required package in the "requirements" of the manifest.  
 
 An example is as follows:
-```python
-manifest = {
-    'memory': 2048,
-    'disk_quota': '2048MB',
-    'requirements': [
-        'pandas'
-    ],
-    'type': 'API'
-}
-```
-![](../_static/images/portal/workspace/manifest.png)
-
-In this example, **memory** and **disk_quota** are also assigned to 2048MB. If set **memory** or **disk_quota** as **int** type, the default unit is **MB**. Or, use **str** type and you can specify the unit in **M**, **MB**, **G**, or **GB**.
-
-> **Note:** The default value of **disk_quota** is **2048MB** to avoid insufficient disk space when installing modules. If you set **disk_quota** less than 2048MB, the value will be overridden to 2048MB.
-
-The **requirements** are the most important part in analytic develop. As native python develop, when you need some external modules, you can use **requirements.txt** to record all dependencies of your analytic. (More information can be found at [pip docs](https://pip.pypa.io/en/stable/user_guide/#id1).) Provide a list of **requirements** can obtain the same effect when developing analytic by **AFS**.
-
-The **Type** is used to declare this analytic is an **APP** or an **API**. In default, all analytic will be assigned as **APP** type. But if you want your analytic serve as an **API** (and also write in any web framework), you need set **type** to **API** to host your analytic on **WISE-PaaS**.
-
-When coding the analytics, and need to use the **AFS SDK** package, we can add the required package in the "requirements" of the manifest. There is an example as follows:
-
 ```python
 manifest = {
     'memory': 256,
@@ -69,23 +47,29 @@ manifest = {
     'type': 'API'
 }
 ```
+![](../_static/images/portal/workspace/manifest.png)
+
+In this example, **memory** and **disk_quota** are also assigned to 2048MB. If set **memory** or **disk_quota** as **int** type, the default unit is **MB**. Or, use **str** type and you can specify the unit in **M**, **MB**, **G**, or **GB**.
+
+> **Note:** The default value of **disk_quota** is **2048MB** to avoid insufficient disk space when installing modules. If you set **disk_quota** less than 2048MB, the value will be overridden to 2048MB.
+
+The **requirements** are the most important part in analytic develop. As native python develop, when you need some external modules, you can use **requirements.txt** to record all dependencies of your analytic. (More information can be found at [pip docs](https://pip.pypa.io/en/stable/user_guide/#id1).) Provide a list of **requirements** can obtain the same effect when developing analytic by **AFS**.
+
+The **Type** is used to declare this analytic is an **APP** or an **API**. In default, all analytic will be assigned as **APP** type. But if you want your analytic serve as an **API** (and also write in any web framework), you need set **type** to **API** to host your analytic on **WISE-PaaS**.
 
 
 #### Create analytic with Online Code IDE
 
 1. Click the `CREATE` button.
-    ![analytic_create_button](../_static/images/portal/workspace/analytics/create_new_analytic.png)
+    ![analytic_create_button](../_static/images/portal/workspace/analytics/1-7.png)
 
 2. Enter the custom name of the analysis module, and press NEXT to confirm.
-    ![analytic_naming_dialog](../_static/images/portal/workspace/analytics/create_new_analytic_naming.png)
-
-    ![online_code_ide_loading](../_static/images/portal/workspace/analytics/online_code_ide_loading.png)
+    ![analytic_naming_dialog](../_static/images/portal/workspace/analytics/1-9.png)
 
 3. When the newly established development & editing page appears in the workspace, it means the module has been successfully created and you can write the analysis module using Python programming language.
-    ![online_code_ide](../_static/images/portal/workspace/analytics/online_code_ide.png)
-
+    
 4. After filling in the program code, you can click the icon ![](../_static/images/portal/workspace/analytics/icon_01.png) to save it. Next, click `SAVE` button to push analysis training model application to the platform in the form of an App. This APP will show in Workspace list when completely deployed.
-    ![online_code_ide](../_static/images/portal/workspace/analytics/jn_save.png)
+    ![online_code_ide](../_static/images/portal/workspace/analytics/1-13.png)
 
 #### Install module with [Vendor](vendor.html) in private cloud
 
@@ -104,8 +88,6 @@ This section will provide an example to use **Vendor** of AFS to install a modul
     ```bash
     ! pip install $MODULE_URL?auth_code=$auth_code
     ```
-    ![install_module_from_vendor](../_static/images/portal/workspace/analytics/install_module_from_vendor.png)
-
 
 
 #### Example of Online Code IDE
@@ -136,8 +118,6 @@ manifest = {
     'type': 'API'
 }
 ```
-![](../_static/images/portal/workspace/analytics/manifest.png)
-
 
 **Step 3:** Setting parameter of the analytic method. (We use the decision tree method for the example)
 In **Online Code IDE**, you can create a node on **Node-RED** by **SDK**, and you can provide the **Hyper-Parameter Tuning** for user. The following code must be at **second cell**.
@@ -309,15 +289,6 @@ ret = cfg.next_node(df2, debug=False)
 print(json.dumps(ret))
 
 ```
-![](../_static/images/portal/workspace/analytics/dt_1.png)
-
-![](../_static/images/portal/workspace/analytics/dt_2.png)
-
-![](../_static/images/portal/workspace/analytics/dt_3.png)
-
-![](../_static/images/portal/workspace/analytics/dt_4.png)
-
-![](../_static/images/portal/workspace/analytics/dt_5.png)
 
 **Step 5:** Save and upload the Analytic API
 After we edit the Analytic App, we must save and upload it as follow steps:
@@ -328,11 +299,7 @@ After we edit the Analytic App, we must save and upload it as follow steps:
 
 ![](../_static/images/portal/workspace/analytics/dt_to_save.png)
 
-![](../_static/images/portal/workspace/analytics/dt_save_inprogress.png)
-
 Wait a second, we can see that it's successful to upload.
-
-![](../_static/images/portal/workspace/analytics/dt_save_running.png)
 
 ----------------------------------------------------------
 ### Solution
@@ -344,7 +311,7 @@ Now, we subscribe the ota node firstly.
 **Step 1:** Click **Catalog**. 
 
 **Step 2:** Click ota's **DETAIL**.
-![](../_static/images/portal/workspace/solution/click_ota.png)
+![](../_static/images/portal/workspace/solution/2-7.png)
 
 **Step 3:** Click **SUBSCRIBE**, and we subscribe the ota node successfully.
 
@@ -352,25 +319,21 @@ Next, we subscribe the firehose node.
 
 **Step 4:** Click **Catalog**.
 
-![](../_static/images/portal/workspace/solution/subscribe_ota.png)
+![](../_static/images/portal/workspace/solution/2-8.png)
 
 **Step 5:** Click influxdb_query's **DETAIL**.
 
-![](../_static/images/portal/workspace/solution/click_firehose.png)
+![](../_static/images/portal/workspace/solution/2-4.png)
 
 **Step 6:** Click **SUBSCRIBE**, and we subscribe the influxdb_query node successfully.
 
 **Step 7:** Click **Workspaces**, go back to workspace.
 
-![](../_static/images/portal/workspace/solution/subscribe_firehose.png)
+![](../_static/images/portal/workspace/solution/2-5.png)
 
-Now, we can see the new Analytic APIs are creating.
+After subsribing the nodes, the system will rederect to the Analytics page. Wait a second, the Analytic APIs are created successfully.
 
-![](../_static/images/portal/workspace/solution/catalog_inprogress.png)
 
-The Analytic APIs are created successfully.
-
-![](../_static/images/portal/workspace/solution/catalog_running.png)
 
 
 
@@ -386,22 +349,18 @@ There are the steps as follows:
 
 **Step 3:** Click **CREATE**.
 
-![](../_static/images/portal/workspace/solution/create_solution.png)
+![](../_static/images/portal/workspace/solution/2-13.png)
 
 **Step 4:** Enter the solution name.
 
 **Step 5:** Click **CREATE** to create the solution.
 
-![](../_static/images/portal/workspace/solution/solution_name.png)
+![](../_static/images/portal/workspace/solution/2-14.png)
 
 
-**Step 6:** Click **EDIT**.
+**Step 6:** Click **EDIT**, and the online flow IDE is shown, and we can start to create the flow.
 
-![](../_static/images/portal/workspace/solution/goto_solution.png)
-
-Now, we can see the Node-RED UI, and start to create the flow.
-
-![](../_static/images/portal/workspace/solution/new_node_red.png)
+![](../_static/images/portal/workspace/solution/2-16.png) 
 
 #### Start create the solution by Online Flow IDE
 In the **Pre-condition** step, we create ota node and influxdb_query node. As the example in **Example of Code IDE**, we create a Decision Tree node. The sso_setting already exists. 
@@ -410,17 +369,12 @@ Now, we have **sso_setting** node, **influxdb_query** node, **training_dt_model*
 
 You need pull four nodes such that **sso_setting**, **influxdb_query**, **training_dt_model**, and **ota**.
 
-Here is an example as follows:
-![](../_static/images/portal/workspace/solution/4node_innodered.png)
-
 **Setup the nodes**
 1. The **sso_setting** node
 
     **Step 1:** Enter **SSO User** and **SSO Password**.
 
-    **Step 2:** Click **DONE** to save the setting.
-
-    ![](../_static/images/portal/workspace/solution/sso_node.png)
+    **Step 2:** Click **DONE** to save and exit the setting.
 
 2. The **firehose_influxdb_query** node
 
@@ -428,33 +382,29 @@ Here is an example as follows:
 
     **Step 2:** Click **DONE** to save your setting.
 
-    ![](../_static/images/portal/workspace/solution/firehose_node.png)
+    ![](../_static/images/portal/workspace/solution/2-17.png)
 
 3. The **training_dt_model** node
 
     **Step 1:** Enter **parameters** to training model.
 
-    ![](../_static/images/portal/workspace/solution/dt_nodered_1.png)
+    ![](../_static/images/portal/workspace/solution/2-18.png)
 
     **Step 2:** Select **features** to training model.
 
     **Step 3:** Select **numerical features**.
 
-    ![](../_static/images/portal/workspace/solution/dt_nodered_2.png)
+    ![](../_static/images/portal/workspace/solution/2-19.png)
 
     **Step 4:** Select **target features** to training model.
 
     **Step 5:** Please click **DONE** to save your setting when you complete the setup.
-
-    ![](../_static/images/portal/workspace/solution/dt_nodered_3.png)
 
 4. The **ota** node
 
     **Step 1:** Choose **Device Name** and **Storage Name**.
 
     **Step 2:** Please click **DONE** to save the setting when you complete the setup.
-
-    ![](../_static/images/portal/workspace/solution/ota_node.png)
 
 5. **Nodes connecting**
 
@@ -463,10 +413,9 @@ Here is an example as follows:
     **Step 2:** Click **Deploy** to save **Node-RED**.
 
     **Step 3:** Click **SAVE** to save solution.
-    ![](../_static/images/portal/workspace/solution/deploy_nodered.png)
+    ![](../_static/images/portal/workspace/solution/2-22.png)
 
 We create the solution successfully when it shows **Update complete** in the bottom right.
-![](../_static/images/portal/workspace/solution/save_successful.png)
 
 
 
