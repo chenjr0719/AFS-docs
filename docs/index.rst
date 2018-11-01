@@ -37,10 +37,17 @@ Welcome to AFS documentation!
 
 .. toctree::
    :maxdepth: 3
+   :caption: Trouble Shooting
+
+   trouble_shooting/trouble_shooting###
+   trouble_shooting/hidden_space
+
+
+.. toctree::
+   :maxdepth: 3
    :caption: Developer Guildlines
    
    developer_guildlines/startup_inference_docker###
-   developer_guildlines/troubleshooting###
    developer_guildlines/private_registry###
 
 Indices and tables
