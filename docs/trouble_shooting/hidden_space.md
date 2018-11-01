@@ -1,6 +1,5 @@
 # Side Effect of Removing the Hidden Space
 
-# Side Effect of Removing the Hidden Space
 * To avoid the duplicated APPs' name, the naming rules are revised as follows:
     - Jupyter => code-ide-{instance[0:8]}, {instance_id}-jupyter.wise-paas.com => code-ide-{instance[0:8]}.wise-paas.com
     - Node-Red => flow-ide-{instance[0:8]}, {instance_id}-node-red.wise-paas.com => flow-ide-{instance[0:8]}.wise-paas.com
