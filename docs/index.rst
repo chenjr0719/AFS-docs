@@ -39,9 +39,8 @@ Welcome to AFS documentation!
    :maxdepth: 3
    :caption: Trouble Shooting
 
-   trouble_shooting/trouble_shooting###
    trouble_shooting/hidden_space
-
+   trouble_shooting/trouble_shooting
 
 .. toctree::
    :maxdepth: 3
