@@ -33,8 +33,8 @@ In the section, we provide some problems that users may encounter, and the solut
 
 ## Other Issue
 * When uploading the file which is less than 2GB, but the error occured, the error message: "StorageDataError: BotoClientError: Out of space for destination file."
-	* Root cause: Checking the Jupyter in afs service instance and find that the disk is almost full, already used about 1.9GB. It causes an exception message when the Boto client is used to get file from the Blob store.
-	* Solution: When subscribing the AFS service instance after version 1.2.26, the Jupyter and Node-RED would be deployed to the current AFS Instance. Users can use the CF CLI to obtain the current usage of the disk. (Management Portal only displays the size of the App, but can't display usage). If there is not enough space, the users can delete the application or restart the app by the CLI command.   
+	* **Root cause:** Checking the Jupyter in afs service instance and find that the disk is almost full, already used about 1.9GB. It causes an exception message when the Boto client is used to get file from the Blob store.
+	* **Solution:** When subscribing the AFS service instance after version 1.2.26, the Jupyter and Node-RED would be deployed to the current AFS Instance. Users can use the CF CLI to obtain the current usage of the disk. (Management Portal only displays the size of the App, but can't display usage). If there is not enough space, the users can delete the application or restart the app by the CLI command.   
     
 	There are the commands to check the disk quota:
 	- Check the disk quota that the current APP are used: 
