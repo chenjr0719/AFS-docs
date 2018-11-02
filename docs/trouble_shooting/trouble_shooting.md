@@ -1,4 +1,4 @@
-# Trouble Shooting
+# Troubleshooting
 In the section, we provide some problems that users may encounter, and the solutions for reference.
 
 ## Jupyter Kernel Die
