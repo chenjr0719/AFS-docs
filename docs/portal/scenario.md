@@ -317,7 +317,8 @@ The detail steps are included in Scenario 2., please refer to Step 8-10 of Scena
 
 	b. Click the link to download csv example.
 
-	c. Copy the [sample](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/multiple_task_example.csv) to a text editor and name the file multi_task.csv.
+	c. Copy the [sample](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/notebook/02_support_vector_machine/multiple_task_example.csv) to a text editor and name the file multi_task.csv. Please enter the Analytics’ name to app_name column in the csv sample.
+	![](../_static/images/portal/tasks/multitask_sample.png)
 
 2. Select the csv file (please select the csv file created by 1.c above) and click `CREATE` to create the tasks.
 
