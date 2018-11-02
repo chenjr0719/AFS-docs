@@ -117,19 +117,19 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 4. Setup the **RMM** device, include (1)install the **RMM Agent** in the edge device; (2)register the device; and (3)create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#EdgeSense-4).
 
 #### Create Solution by Online Flow IDE
-1. Create a new Analytics, and it's named by training_decisiontree.
+Step 1.: Create a new Analytics, and it's named by training_decisiontree.
 	![](../_static/images/portal/scenario/2-13.png)
 	![](../_static/images/portal/scenario/2-14.png)
 	![](../_static/images/portal/scenario/2-15.png)
 	![](../_static/images/portal/scenario/2-16.png)
 
-2. Pull the sso_setting node from the list in the left side. Then, enter the SSO Username and SSO Password
+Step 2.: Pull the sso_setting node from the list in the left side. Then, enter the SSO Username and SSO Password
 in it.
 
-3. Pull the influxdb_query node from the list in the left side. Then, select the influxdb_dt and the service key that we have created. Therefore, enter `select * from machine` to the Query Command.
+Step 3.: Pull the influxdb_query node from the list in the left side. Then, select the influxdb_dt and the service key that we have created. Therefore, enter `select * from machine` to the Query Command.
 	![](../_static/images/portal/scenario/2-17.png)
 
-4. Pull the training_dt_model node from the list in the left side, and setup the parameters.
+Step 4.: Pull the training_dt_model node from the list in the left side, and setup the parameters.
 	![](../_static/images/portal/scenario/2-18.png)
 
 	* criterion: Can't be empty. Please enter *gini* or *entropy*, separated by commas, there must be no spaces between parameters and commas.
@@ -152,7 +152,7 @@ in it.
 	* Map Column: The value of this field is the JSON Key value (can't be changed).
 
 	
-5. Pull the ota node from the list in the left side, and setup the parameters. Select the edge device and storage that were setuped in *Pre-condition*.
+Step 5.: Pull the ota node from the list in the left side, and setup the parameters. Select the edge device and storage that were setuped in *Pre-condition*.
 	![](../_static/images/portal/scenario/2-21.png)
 
 6. Connect the Influxdb_Firehose node to the training_dt_model node, then connect the training_dt_model node to the OTA node, click the `Deploy` button in the upper right corner, and click the `SAVE` button to save the Solution.
@@ -181,7 +181,7 @@ in it.
 ## SCENARIO 3. Inference Engine
 
 #### Pre-condition
-* The OS of edge devices must be the **Windows 10 Pro** 64-bit version.
+* The OS of edge devices must be the **Windows 10 Pro** 64-bit version, and Build 14393 or later.
 
 * The language of OS must be in **Simplified Chinese**, **Traditional Chinese**, and **English**.
 
@@ -308,7 +308,7 @@ The development process can be done offline through Vendor.
 ## SCENARIO 5. AFS Task
 
 #### Create a task
-The detail steps are included in Scenario 2., please refer to Step 8-10 of Scenario 2.
+The detail steps are included in Scenario 2., please refer to the steps 7 to 9 of Scenario 2.
 
 #### Create multiple tasks
 1. Download “multiple_task_example.csv” to make the list of tasks.
