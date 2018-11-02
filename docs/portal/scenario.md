@@ -180,7 +180,7 @@ in it.
 ## SCENARIO 3. Inference Engine
 
 #### Pre-condition
-* The OS of edge devices must be the **Windows 10 Pro** 64-bit version, and Build 14393 or later.
+* The OS of edge devices must be the **Windows 10 Pro** 64-bit version, and **Build 14393 or later**.
 
 * The language of OS must be in **Simplified Chinese**, **Traditional Chinese**, and **English**.
 
