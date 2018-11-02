@@ -211,7 +211,7 @@ in it.
 	* Set "Never notify".
 	![image](../_static/images/inference_engine/user_control.png)
 
-* The docker offical suggestion before installing [link](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install).
+* The docker offical suggestion before installing, please refer the [docker docs](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install).
 	* Windows 10 64bit: Pro, Enterprise or Education (1607 Anniversary Update, Build 14393 or later).
 
 	* Virtualization is enabled in BIOS. Typically, virtualization is enabled by default. This is different from having Hyper-V enabled. For more detail see Virtualization must be enabled in Troubleshooting.
