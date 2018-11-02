@@ -46,6 +46,7 @@ Welcome to AFS documentation!
    :maxdepth: 3
    :caption: Developer Guildlines
    
+   developer_guildlines/developer_guildlines###
    developer_guildlines/startup_inference_docker###
    developer_guildlines/private_registry###
 

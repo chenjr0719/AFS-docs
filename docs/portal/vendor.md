@@ -21,20 +21,19 @@ Python modules will follow [PEP 427](https://www.python.org/dev/peps/pep-0427/#f
 Here is an example for download a module **scikit-learn**:
 
 1. Search the module on [PyPI](https://pypi.org/).
-    ![search_module](../_static/images/portal/vendor/scikit_learn_search.png)
+    ![search_module](../_static/images/portal/vendor/xgb01.png)
 
 2. Find the correct project page.
-    ![module_page](../_static/images/portal/vendor/scikit_learn.png)
+    ![module_page](../_static/images/portal/vendor/xgb02.png)
 
-3. Switch to **Download files** page.
-    ![download_files](../_static/images/portal/vendor/scikit_learn_download_files_1.png)
+3. Switch to **Download files** page.    
 
 4. Choose compatible version and download.
-    ![download_files](../_static/images/portal/vendor/scikit_learn_download_files_2.png)
+    ![download_files](../_static/images/portal/vendor/xgb03.png)
 
 The name of wheel file looks like:
 ```
-scikit_learn-0.19.1-cp36-cp36m-manylinux1_x86_64.whl
+xgboost-0.80-py2.py3-none-manylinux1_x86_64.whl
 ```
 According to [PEP 427](https://www.python.org/dev/peps/pep-0427/#file-format), **cp36** means it is for Python (more specifically, it's [CPython](https://en.wikipedia.org/wiki/CPython)) **3.6.x**, **manylinux1** means it is for **Linux** platform, and **x86_64** means it is for **64bit architecture**.
 
@@ -63,6 +62,9 @@ After download module file, you can upload it to AFS Vendor and let all analytic
 1. Click **UPLOAD** button, and select file which downloaded at first step.
     ![upload_module](../_static/images/portal/vendor/upload.png)
 
+2. After uploading the package, we can find it.
+    ![upload_module](../_static/images/portal/vendor/xgb_check.png)
+
 ### Delete module in Vendor
 
 You can also delete modules in Vendor with following steps:
@@ -70,6 +72,6 @@ You can also delete modules in Vendor with following steps:
 1. Click trash icon right behind the module name.
     ![module_delete_button](../_static/images/portal/vendor/delete.png)
 
-2. Portal will ask to confirm delete, click **DELETE** button.
+2. Portal will ask to confirm, click **DELETE** button, and the package will be deleted.
     ![delete_module](../_static/images/portal/vendor/confirm_del.png)
 
