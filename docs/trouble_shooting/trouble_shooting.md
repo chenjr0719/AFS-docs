@@ -37,8 +37,13 @@ In the section, we provide some problems that users may encounter, and the solut
 	Solution: When subscribing the AFS service instance after version 1.2.26, the Jupyter and Node-RED would be deployed to the current AFS Instance. Users can use the CF CLI to obtain the current usage of the disk. (Management Portal only displays the size of the App, but can't display usage). If there is not enough space, the users can delete the application or restart the app by the CLI command.   
 
 	There are the commands to check the disk quota:
-	- Check the disk quota that the current APP are used: cf app APP_NAME
-	- Login to the APP: cf ssh APP_NAME
-	- Restart the App: cf restart APP_NAME
+	- Check the disk quota that the current APP are used: 
+		```cf app APP_NAME```
+	- Login to the APP: 
+		```cf ssh APP_NAME```
+	- Restart the App: 
+		```cf restart APP_NAME```
+
+
 
 
