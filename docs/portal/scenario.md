@@ -228,7 +228,7 @@ in it.
 	![image](../_static/images/inference_engine/01_package.png)
 
 	b. Edit "install_docker.bat", the file path should be modified to matching the path in the edge device.
-	![image](../_static/images/inference_engine/02_1.png)
+	![image](../_static/images/inference_engine/02_11.png)
 
 	c. Enter the Package Type, Package Version, then select the path for saving the package file.
 	![image](../_static/images/inference_engine/02_2_step1.png)

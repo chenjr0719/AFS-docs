@@ -3,7 +3,7 @@
 Previously, an introduction of **Inference Engine**, it's a Python runtime program on Docker. We can install it manually step by step. However, for the industial application, there are many edge devices (e.g., perhaps 100, 1000, or more devices) work online at the same time. In the section, we introduce how to install the Inference Engine automatically in many edge devices.
 
 #### Pre-condition
-* The OS of edge devices must be the **Windows 10 Pro** 64-bit version.
+* The OS of edge devices must be the **Windows 10 Pro** 64-bit version, and **Build 14393 or later**.
 
 * The language of OS must be in **Simplified Chinese**, **Traditional Chinese**, and **English**.
 
@@ -50,7 +50,7 @@ Previously, an introduction of **Inference Engine**, it's a Python runtime progr
 	![image](../_static/images/inference_engine/01_package.png)
 
 	b. Edit "install_docker.bat", the file path should be modified to matching the path in the edge device.
-	![image](../_static/images/inference_engine/02_1.png)
+	![image](../_static/images/inference_engine/02_11.png)
 
 	c. Enter the Package Tyep, Package Version, then select the path for saving the package file.
 	![image](../_static/images/inference_engine/02_2_step1.png)
