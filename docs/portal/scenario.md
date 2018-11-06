@@ -188,7 +188,7 @@ in it.
 
 * The edge devices must be installed the **RMM Agent (v-1.0.16)**, and registed in RMM Server.
 
-* Get the application of packaging (OTAPackager-1.0.5.exe).
+* Get the application of packaging (OTAPackager-1.0.5.exe). [[Download](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS-SampleCode/analytics_framework_service/blob/master/inference_engine/auto_install_docker/OTAPackager-1.0.5.exe.zip)]
 
 * Download the files for package as follows: 
    
