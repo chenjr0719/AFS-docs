@@ -113,9 +113,9 @@ f. Click and modify ex_config.ini, and add "http://127.0.0.1:7500/predict" after
 	![image](../_static/images/inference_engine/19.png)
 g. Open the firehose.ipynb just uploaded on jupyter and click `Run` to execute.
 	![image](../_static/images/inference_engine/20.png)
-h. Login to inference_engine, and see the prediction results.
-		  i. Execute $ cmd to open the command window
-		 ii. Execute $ docker exec -it inference bash
-		iii. In order to check the model is delivered into the inference engine, we can execute $ ls /root/inference_engine/inference_engine/ to see the model.pkl exists or not. (About the model name, it's must named by "model.pkl".)
-		 iv. Execute $ cat /root/inference_engine/inference_engine/predict_result.txt to check if the predicted value continues to increase, if the representative is successful.
-		![image](../_static/images/inference_engine/21.png)
+h. Login to inference_engine, and see the prediction results.   
+	  i. Execute $ cmd to open the command window   
+	 ii. Execute $ docker exec -it inference bash   
+	iii. In order to check the model is delivered into the inference engine, we can execute $ ls /root/inference_engine/inference_engine/ to see the model.pkl exists or not. (About the model name, it's must named by "model.pkl".)   
+	 iv. Execute $ cat /root/inference_engine/inference_engine/predict_result.txt to check if the predicted value continues to increase, if the representative is successful.   
+	![image](../_static/images/inference_engine/21.png)
