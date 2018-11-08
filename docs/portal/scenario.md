@@ -140,7 +140,6 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 	* model_name: Name the trained model, must .pkl type(e.g., model.pkl).
 		**Note:** The name of model must be "model.pkl", currently.
 		![](../_static/images/portal/scenario/2-19.png)
-		![](../_static/images/portal/scenario/2-20.png)
 	
 	* Select Features: Select which fields are to be put into the model for training (can be multiple select). In the field, please select the fields KW_EQUIPMENT, KW_FAN, KW_SUMMARY, PRESSURE_OUTPUT, STATUS_FAN, VOLTAGE_INPUT, and EVENT.
 	
