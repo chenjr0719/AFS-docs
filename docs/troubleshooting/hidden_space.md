@@ -7,7 +7,7 @@ Before AFS v1.2.26, there was a space that storaged the Jupyter and Node-RED two
     - Node-Red => flow-ide-{instance[0:8]}, {instance_id}-node-red.{domain} => flow-ide-{instance[0:8]}.{domain}
     - {name}-dev => analytic-{name}-dev-{instance[0:8]}, {instance_id}-{name}-dev.{domain} => analytic-{name}-dev-{instance[0:8]}.{domain}
 
-* After removing the hidden space, the apps are listed in the Management Portal. The users can remove any apps by themself, but removing some specific apps will damage the AFS service instance. The list of apps as follows are the dependency of AFS, please DON'T remove them:
+* After removing the hidden space, the apps are listed in the Management Portal. The users can remove any apps by themselves, but removing some specific apps will damage the AFS service instance. The list of apps as follows are the dependency of AFS, please DON'T remove them:
 	- code-ide-xxxxxxxx
 	- flow-ide-xxxxxxxx   
 
