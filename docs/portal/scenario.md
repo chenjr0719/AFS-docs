@@ -302,7 +302,7 @@ The development process can be done offline through Vendor.
 
 2. About how to manage the Vendor, including module upload, download, and delete the package, please refer to [documents](https://afs-docs.readthedocs.io/en/latest/portal/vendor.html).
 
-## SCENARIO 5. AFS Task
+## SCENARIO 5. AFS Tasks
 
 #### Create a task
 The detailed steps are included in Scenario 2., please refer to the steps 7 to 9 of Scenario 2.
