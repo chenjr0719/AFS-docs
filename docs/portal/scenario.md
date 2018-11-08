@@ -307,7 +307,7 @@ The development process can be done offline through Vendor.
 ## SCENARIO 5. AFS Task
 
 #### Create a task
-The detail steps are included in Scenario 2., please refer to the steps 7 to 9 of Scenario 2.
+The detailed steps are included in Scenario 2., please refer to the steps 7 to 9 of Scenario 2.
 
 #### Create multiple tasks
 1. Download “multiple_task_example.csv” to make the list of tasks.
