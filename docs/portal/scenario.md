@@ -102,19 +102,19 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 	
 	**Note:** After the processing, the influxdb_query node is generated in the Online Flow IDE.
 
-3. Subscribe the OTA node in the Online Flow IDE.
+3. Subscribe the ota node in the Online Flow IDE.
 	
 	a. In the **Catalog**, we can subscribe the **ota** node in the Analytics category. Please refer the screeshots as follows:
 	![](../_static/images/portal/scenario/2-7.png)
 	![](../_static/images/portal/scenario/2-8.png)
 
-	b. The **OTA** is listed in the **Analytics** when it's subscribed successfully.
+	b. The **ota** is listed in the **Analytics** when it's subscribed successfully.
 	
 	c. Wait a minute, the status of the Analytics will change to **Running**, and go to next step.
 	
-	**Note:** After the processing, the OTA node is generated in the Online Flow IDE.
+	**Note:** After the processing, the ota node is generated in the Online Flow IDE.
 
-4. Setup the **RMM** device, include (1)install the **RMM Agent** in the edge device; (2)register the device; and (3)create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#EdgeSense-4).
+4. Setup the **RMM** device, include (1) install the **RMM Agent** in the edge device; (2) register the device; and (3) create a storage for RMM. Please refer the [document](https://portal-technical-stage.wise-paas.com/doc/document-portal.html#EdgeSense-4).
 
 #### Create Solution by Online Flow IDE
 1. Create a new Analytics, and it's named by training_decisiontree.
@@ -123,8 +123,7 @@ Create Online Flow IDE in the **AFS Workspaces - Solutions**, and train the **De
 	![](../_static/images/portal/scenario/2-15.png)
 	![](../_static/images/portal/scenario/2-16.png)
 
-2. Pull the sso_setting node from the list in the left side. Then, enter the SSO Username and SSO Password
-in it.
+2. Pull the sso_setting node from the list in the left side. Then, enter the SSO Username and SSO Password in it.
 
 3. Pull the influxdb_query node from the list in the left side. Then, select the influxdb_dt and the service key that we have created. Therefore, enter `select * from machine` to the Query Command.
 	![](../_static/images/portal/scenario/2-17.png)
@@ -132,7 +131,7 @@ in it.
 4. Pull the training_dt_model node from the list in the left side, and setup the parameters.
 	![](../_static/images/portal/scenario/2-18.png)
 
-	* criterion: Can't be empty. Please enter *gini* or *entropy*, separated by commas, there must be no spaces between parameters and commas.
+	* criterion: Can't be empty. Please enter *gini* or *entropy*, separated by commas, and without spaces between parameters and commas.
 	
 	* random_state and max_depth: Enter the integer only. If want to optimize the parameters, we can fill in multiple sets of parameters in the random_state and max_depth fields as shown above. The parameters must be separated by commas. There must be no blank between the parameters and the comma.
 	
@@ -154,7 +153,7 @@ in it.
 5. Pull the ota node from the list in the left side, and setup the parameters. Select the edge device and storage that were setuped in *Pre-condition*.
 	![](../_static/images/portal/scenario/2-21.png)
 
-6. Connect the Influxdb_Firehose node to the training_dt_model node, then connect the training_dt_model node to the OTA node, click the `Deploy` button in the upper right corner, and click the `SAVE` button to save the Solution.
+6. Connect the Influxdb_query node to the training_dt_model node, then connect the training_dt_model node to the ota node, click the `Deploy` button in the upper right corner, and click the `SAVE` button to save the Solution.
 	![](../_static/images/portal/scenario/2-22.png)
 
 7. Create a new Solution Task.
@@ -163,11 +162,11 @@ in it.
 	![](../_static/images/portal/scenario/2-23.png)
 	![](../_static/images/portal/scenario/2-24.png)
 
-	b. Select the Solution Type, Solution Instance select training_decisiontree, and click NEXT.
+	b. Select the **Solution** in Task Type, and select **training_decisiontree** Solution Instance. Then, click NEXT.
 	![](../_static/images/portal/scenario/2-25.png)
 	![](../_static/images/portal/scenario/2-26.png)
 
-	c. About the Trigger Type, select Interval, and selects Minutes in the Interval Type. The Interval fills in "1". Then, click CREATE.
+	c. Select **Interval** in the Trigger Type, and selects **Minutes** in the Interval Type. The Interval fills in "1". Then, click CREATE.
 	![](../_static/images/portal/scenario/2-27.png)
 	![](../_static/images/portal/scenario/2-28.png)
 
