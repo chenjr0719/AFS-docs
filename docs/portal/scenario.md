@@ -184,7 +184,7 @@ in it.
 
 * The language of OS must be in **Simplified Chinese**, **Traditional Chinese**, and **English**.
 
-* Turn on the Hyper-V in Windows 10. About the steps, please refer the [document](https://docs.microsoft.com/zh-tw/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+* Turn on the Hyper-V in Windows 10. About the steps, please refer the [document](https://docs.microsoft.com/en-US/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 * The edge devices must be installed the **RMM Agent (v-1.0.16)**, and registed in RMM Server.
 
