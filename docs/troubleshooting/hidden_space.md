@@ -3,9 +3,9 @@
 Before AFS v1.2.26, there was a space that storaged the Jupyter and Node-RED two applications. The information of the space wasn't shown in the Management Portal, so called "hidden space". Therefore, users can't know the quota of resource had been used. In order to declare the resource quota, the hidden space has been removed. All of apps are moved to the user's space, and they are listed in the "Application List", currently.
 
 * To avoid the duplicated apps' name, the naming rules are revised as follows:
-    - Jupyter => code-ide-{instance[0:8]}, {instance_id}-jupyter.wise-paas.com => code-ide-{instance[0:8]}.wise-paas.com
-    - Node-Red => flow-ide-{instance[0:8]}, {instance_id}-node-red.wise-paas.com => flow-ide-{instance[0:8]}.wise-paas.com
-    - {name}-dev => analytic-{name}-dev-{instance[0:8]}, {instance_id}-{name}-dev.wise-paas.com => analytic-{name}-dev-{instance[0:8]}.wise-paas.com
+    - Jupyter => code-ide-{instance[0:8]}, {instance_id}-jupyter.{domain} => code-ide-{instance[0:8]}.{domain}
+    - Node-Red => flow-ide-{instance[0:8]}, {instance_id}-node-red.{domain} => flow-ide-{instance[0:8]}.{domain}
+    - {name}-dev => analytic-{name}-dev-{instance[0:8]}, {instance_id}-{name}-dev.{domain} => analytic-{name}-dev-{instance[0:8]}.{domain}
 
 * After removing the hidden space, the apps are listed in the Management Portal. The users can remove any apps by themself, but removing some specific apps will damage the AFS service instance. The list of apps as follows are the dependency of AFS, please DON'T remove them:
 	- code-ide-xxxxxxxx
