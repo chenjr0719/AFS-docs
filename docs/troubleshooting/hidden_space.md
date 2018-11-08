@@ -1,6 +1,6 @@
 # Side Effect of Removing the Hidden Space
 
-Before AFS v1.2.26, there was a space that storage the Jupyter and Node-REE two applications. The information of the space wasn't shown in the Management Portal, so calle "hidden space". Therefore, users can't know the quota of resource had been used. In order to declare the resource quota, the hidden space has been removed. All of APPs are move to the user's space, and they are listed in the "Application List".
+Before AFS v1.2.26, there was a space that storage the Jupyter and Node-REE two applications. The information of the space wasn't shown in the Management Portal, so called "hidden space". Therefore, users can't know the quota of resource had been used. In order to declare the resource quota, the hidden space has been removed. All of APPs are move to the user's space, and they are listed in the "Application List".
 
 * To avoid the duplicated APPs' name, the naming rules are revised as follows:
     - Jupyter => code-ide-{instance[0:8]}, {instance_id}-jupyter.wise-paas.com => code-ide-{instance[0:8]}.wise-paas.com
