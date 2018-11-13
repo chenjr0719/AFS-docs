@@ -38,11 +38,10 @@ In the section, we provide some problems that users may encounter, and the solut
 The analytics and solutions can be scduled to execute automatically by **Tasks**. About the operations are introduced in the [Tasks](https://afs-docs.readthedocs.io/en/latest/portal/tasks.html). However, there is limitation when the task works, and it's described in the section.    
 The troubleshooting of task failed is introduced. When the problem occurs, we can check the log in the analytics. The example and steps are as follows: Please click the **Workspaces**, and click the analytic which want to check. Then, we can see the `LOGS` button, and click it. The logs are shown in the diagram. The message shows "WORKER TIMEOUT" that why the task failed. User can restart the app in the Management Portal, and create a new task for the analytic.
 
-![](../_static/images/ts/ts01.png)
+	![](../_static/images/ts/ts01.png)
 
-![](../_static/images/⁨ts/ts02.png)
+	![](../_static/images/ts/ts02.png)
 
-![](../_static/images/portal/scenario/1-1.png)
 ---
 ## Other Issue
 * When uploading the file which is less than 2GB, but the error occured, the error message: "StorageDataError: BotoClientError: Out of space for destination file."
