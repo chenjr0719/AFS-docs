@@ -92,10 +92,9 @@ The users can operate the tasks by the requirement. There are three operations w
 ![](../_static/images/portal/tasks/multitask_create_3.png)
 
 ### Limitation
-There are currently 5 threads executing tasks on the Kernel Gate Way. When it takes 3 minutes to train the model once, but it is set to execute the task every 1 minute, there will be an error condition in the task. Users must evaluate the schedule execution time for the task.
+There are currently 5 threads executing tasks on the Kernel Gate Way. When it takes 3 minutes to train the model once, but the setup of the task is that execute every 1 minute, there will be an error condition in the task. Users must evaluate the schedule execution time for the task.   
 
-![](../_static/images/portal/tasks/influxdb_log.png)
-
+If the task does not work on the schedule, users can check the log in the online code IDE. Please refer the [troubleshooting](https://afs-docs.readthedocs.io/en/latest/troubleshooting/troubleshooting.html) to see more details.
 
 
 

@@ -31,6 +31,18 @@ In the section, we provide some problems that users may encounter, and the solut
 	* traitlets
 	* ipython_genutils
 
+---
+
+## Task Failed
+
+The analytics and solutions can be scduled to execute automatically by **Tasks**. About the operations are introduced in the [Tasks](https://afs-docs.readthedocs.io/en/latest/portal/tasks.html). However, there is limitation when the task works, and it's described in the section.    
+The troubleshooting of task failed is introduced. When the problem occurs, we can check the log in the analytics. The example and steps are as follows: Please click the **Workspaces**, and click the analytic which want to check. Then, we can see the `LOGS` button, and click it. The logs are shown in the diagram. The message shows "WORKER TIMEOUT" that why the task failed. User can restart the app in the Management Portal, and create a new task for the analytic.
+
+![](../_static/images/⁨troubleshooting⁩/ts01_logs.png)
+
+![](../_static/images/⁨troubleshooting⁩/ts02_logs.png)
+
+
 ## Other Issue
 * When uploading the file which is less than 2GB, but the error occured, the error message: "StorageDataError: BotoClientError: Out of space for destination file."
 	* **Root cause:** Checking the Jupyter in afs service instance and find that the disk is almost full, already used about 1.9GB. It causes an exception message when the Boto client is used to get file from the Blob store.
@@ -43,6 +55,9 @@ In the section, we provide some problems that users may encounter, and the solut
 		```cf ssh APP_NAME```
 	- Restart the App: 
 		```cf restart APP_NAME```
+
+---
+
 
 
 
