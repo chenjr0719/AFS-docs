@@ -42,6 +42,7 @@ The troubleshooting of task failed is introduced. When the problem occurs, we ca
 
 ![](../_static/images/⁨troubleshooting⁩/ts02.png)
 
+![](../_static/images/portal/scenario/1-1.png)
 ---
 ## Other Issue
 * When uploading the file which is less than 2GB, but the error occured, the error message: "StorageDataError: BotoClientError: Out of space for destination file."
