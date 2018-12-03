@@ -1,12 +1,12 @@
 
-## 建立 iii_Decision_Tree_Model
-1. 成功訂閱AFS並成功開啟  
-2. 創建一個新的 Online Code IDE ,iii_Decision_Tree_Model  
-* **Note**: iii 為 company 名稱 , DecisiontreeModel 為 project 名稱並且開頭必須大寫
+## Create iii_Decision_Tree_Model
 
-3. 在Online Code IDE編輯iii_Decision_Tree_Model ,   iii_Decision_Tree_Model 的 ipynb檔可參考以下連結：
-[ipynb連結](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS_AFS_Catalog/iii_DecisionTree/blob/master/src/iii_DecisionTree.ipynb)
-iii_Decision_Tree_Model 的內容參考如下：
+1. Subscribe an AFS service instance, and enter the AFS portal. 
+2. Create a new Online Code IDE, named "iii_Decision_Tree_Model". 
+    **Note**: "iii" is the company name. "Decision_Tree_Model" is project name, and the first character of each word is capitalized.
+
+3. Edit "iii_Decision_Tree_Model" in the Online Code IDE, please refer the [sample code](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS_AFS_Catalog/iii_DecisionTree/blob/master/src/iii_DecisionTree.ipynb).
+
 ```python =
 manifest = {
     'memory': 1024,
@@ -60,7 +60,7 @@ import json
 import requests
 ```
 ```python =
-def grid(data , target , parameters_dt , cv):
+def grid(data, target, parameters_dt, cv):
     clf = tree.DecisionTreeClassifier()
     grid = GridSearchCV(estimator = clf, param_grid = parameters_dt, cv = cv, 
                         scoring = 'accuracy')
@@ -73,11 +73,11 @@ def grid(data , target , parameters_dt , cv):
     return best_accuracy,best_params
 ```
 ```python =
-def training_model(data , target ,best_params , best_accuracy ,model_name):
+def training_model(data, target,best_params, best_accuracy,model_name):
     clf = tree.DecisionTreeClassifier(**best_params)
     clf = clf.fit(data, target)
     #save model
-    joblib.dump(clf , model_name)
+    joblib.dump(clf, model_name)
     client = models()
     client.upload_model(model_name, accuracy=best_accuracy, loss=0.0, tags=dict(machine='dt'))
     del clf,client
@@ -130,7 +130,7 @@ max_depth = max_depth.split(",")
 random_state =list(map(int, random_state))
 max_depth = list(map(int, max_depth))
 
-parameters_dt = {"criterion" : criterion , "random_state" : random_state , "max_depth" : max_depth}
+parameters_dt = {"criterion" : criterion, "random_state" : random_state, "max_depth" : max_depth}
 
 
 
@@ -172,8 +172,8 @@ else:
                 target9 = OneHotEncoder( sparse=False ).fit_transform(df[i].values.reshape(-1,1))
                 data = np.hstack((data,target9))
 
-best_accuracy,best_params = grid(data , target , parameters_dt , cv)
-result = training_model(data , target ,best_params , best_accuracy ,model_name)
+best_accuracy,best_params = grid(data, target, parameters_dt, cv)
+result = training_model(data, target,best_params, best_accuracy,model_name)
 result = str(result)
 
 df2 = pd.DataFrame([result], columns=['model_name'])
@@ -195,6 +195,7 @@ gc.collect()
 print(json.dumps(ret))
 
 ```
+
 4. 點選左上角的 **File** -> **Download as** -> **Notebook(.ipynb)** 下載成 ipynb 的檔案格式
 
 5. 確認檔名為 iii_Decision_Tree_Model.ipynb
@@ -206,7 +207,7 @@ print(json.dumps(ret))
    [GitLab連結](http://advgitlab.eastasia.cloudapp.azure.com/EI-PaaS_AFS_Catalog)
    
 2. 點選連結進入研華GitLab
-3. 右側的帳號登入請點選 **Standard** , 並輸入帳號與密碼完成登入
+3. 右側的帳號登入請點選 **Standard**, 並輸入帳號與密碼完成登入
 4. 點選右側的 **New Project** 建立新的 Repository
    如下圖：
    
@@ -228,7 +229,7 @@ print(json.dumps(ret))
    
    ![](https://i.imgur.com/96ufuVe.png)
    
-7. 下載 Git , 下方為官網連結：
+7. 下載 Git, 下方為官網連結：
    [Git官網](https://git-scm.com/)
    請依照相對應的軟硬體設備選擇正確的檔案下載
    
@@ -238,7 +239,7 @@ print(json.dumps(ret))
    
 9. 請在 Git bash 執行第6步驟所出現的資訊,並依照第6步驟    所出現的資訊依序執行
 
-10. 完成第9步驟後 , 會在桌面看到一個資料夾名為         iii_Decision_Tree_Model(因為我在執行第9步驟時的當前資料夾為 Desktop , 所以產生的資料夾位於桌面)
+10. 完成第9步驟後, 會在桌面看到一個資料夾名為         iii_Decision_Tree_Model(因為我在執行第9步驟時的當前資料夾為 Desktop, 所以產生的資料夾位於桌面)
 
 11. 點擊進入資料夾,請在此資料夾建立兩個資料夾兩個檔案如     下：
     (1)img 資料夾

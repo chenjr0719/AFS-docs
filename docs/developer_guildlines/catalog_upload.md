@@ -56,9 +56,9 @@ Naming rule of Node (HTML, JS)
 		- Output data format: The format of output data (e.g., Request headers, Request, body) that send to the next node.
 		- Response Content: Response body, status code.
 		- Others: The other items(e.g., api interface...etc.)    
-	* version.json: The record of node版本相關資訊。
-		- node_version: node版本號(需與README.md相同)
-		- node_type: native_python
+	* version.json: The record and version of node.
+		- node_version: node version(must be same with "README.md").
+		- node_type: native_python.
 
 * A description (less than 50 words) which shows in the catalog index page is required.
 
@@ -68,23 +68,24 @@ Naming rule of Node (HTML, JS)
 	* /src: Save the source code.
 		- /vendor
 		- Procfile
-		- \{company\}_\{Node_Project\}.ipynb: 改以\{company\}_\{Node_Project\}命名的jupyter notebook(不帶-dev)
+		- \{company\}_\{Node_Project\}.ipynb: name the jupyter notebook by "\{company\}_\{Node_Project\}" (withoyt "-dev").
 		- requirements.txt
 		- runtime.txt
-	* README.md: node的說明與規格，需要包含以下內容。
-		- Node_Name: analytic name名稱
-		- Version: node版本號 (x.x.x)
-		- Description: node的說明 (eng, 字數<=300)
-		- Publish time: publish時間 (yyyy-mm-dd)
-		- Input data format: 傳入node需要的input data格式(ex. Request headers, Request, body)。
-		- Output data format: node送往下個node的output data格式(ex. Request headers, Request body)。
-		- Response Content: (ex. Response body, status code)
-		- Others: 其他項目(e.g., 其他api interface...etc.)    
-	* version.json: 紀錄node版本相關資訊。
-		- node_version: node版本號(需與README.md相同)
+	* README.md: The spec and description of node, includes the items as follows:
+		- Node_Name: The analytic name.
+		- Version: The version of node (x.x.x).
+		- Description: The description of the node, must be in English, and less than 300 words.
+		- Publish time: The date of publish (yyyy-mm-dd).
+		- Input data format: The format of input data (e.g., Request headers, Request, body) that get from the previous node.
+		- Output data format: The format of output data (e.g., Request headers, Request, body) that send to the next node.
+		- Response Content: Response body, status code.
+		- Others: The other items(e.g., api interface...etc.)     
+	* version.json: The record and version of node.
+		- node_version: node version(must be same with "README.md").
 		- node_type: native_python
 
 * Jupyter的/src，在AFS portal中，進入每個analytic的頁面，在網址後加上「/download」，即可將notebook載下來解壓縮取得以下相關檔案。
+* The folder "/src" of Jupyter is in AFS portal, 
 
 * A description (less than 50 words) which shows in the catalog index page is required.
 

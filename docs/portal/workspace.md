@@ -47,7 +47,7 @@ manifest = {
     'type': 'API'
 }
 ```
-![](../_static/images/portal/workspace/manifest.png)
+![](../_static/images/portal/workspace/w03.png)
 
 In this example, **memory** and **disk_quota** are also assigned to 2048MB. If set **memory** or **disk_quota** as **int** type, the default unit is **MB**. Or, use **str** type and you can specify the unit in **M**, **MB**, **G**, or **GB**.
 
